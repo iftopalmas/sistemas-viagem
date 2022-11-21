@@ -12,7 +12,8 @@ O objetivo deste projeto é desenvolver um sistema distribuído formado por 4 ou
 - [Melhores práticas de uso de git e GitHub](https://luizcarvalho.medium.com/modelo-de-gerência-de-branchs-de-sucesso-para-git-54955f876c7)
 
 O repositório é composto de 3 sistemas independentes:
-1.[sistema-companhia-aerea](sistema-companhia-aerea)
+
+1. [sistema-companhia-aerea](sistema-companhia-aerea)
 2. [sistema-hotelaria](sistema-hotelaria)
 3. [sistema-locadora-veiculo](sistema-locadora-veiculo)
 
