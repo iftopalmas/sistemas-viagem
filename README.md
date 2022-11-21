@@ -7,6 +7,7 @@ O objetivo deste projeto é desenvolver um sistema distribuído formado por 4 ou
 - Respository/DAO sem duplicação de código de operações CRUD básicas
 - Injeção de dependência
 - Controle automático de transações
+- Pool de conexões
 - Princípios da Arquitetura REST
 - [Convention over Configuration (CoC)](https://en.wikipedia.org/wiki/Convention_over_configuration)
 - [Melhores práticas de uso de git e GitHub](https://luizcarvalho.medium.com/modelo-de-gerência-de-branchs-de-sucesso-para-git-54955f876c7)
