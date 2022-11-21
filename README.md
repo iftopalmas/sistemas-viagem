@@ -1,1 +1,1 @@
-# Sistemas REST para gerenciamento de companhia aérea, agência de viagens e hotéis
+# Sistemas REST para gerenciamento de companhias aéreas, hotéis e agências de viagens
