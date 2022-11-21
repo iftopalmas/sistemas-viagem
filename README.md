@@ -19,3 +19,11 @@ O repositório é composto de 3 sistemas independentes:
 E um sistema de agência de viagens que se integra com os dois sistemas anteriores para permitir a venda de pacotes de viagem com passagem aérea, reserva de veículo e de hotel:
 
 4. [sistema-agencia-viagem](sistema-agencia-viagem)
+
+## Banco de Dados
+
+Como os sistemas são independentes, cada um terá seu próprio banco de dados. Mas para facilitar, sugiro a utilização de PostgreSQL em todos.
+
+Todos os sistemas que possuem tabelas de cidades e estados devem utilizar os códigos do IBGE para permitir que eles funcionem em conjunto. Se em um sistema uma cidade tiver um código e em outro sistema tiver outro código, obteremos dados errados ao integrar estes sistemas.
+
+Uma lista de cidades e estados com os códigos do IBGE pode ser obtida no script [cidades-brasil-ibge.sql](cidades-brasil-ibge.sql) para PostgreSQL.
