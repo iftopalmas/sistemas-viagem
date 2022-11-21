@@ -1,1 +1,11 @@
-# Sistemas REST para gerenciamento de companhias aéreas, hotéis e agências de viagens
+# Sistemas REST para gerenciamento de companhias aéreas, hotéis, locadoras de veículos e agências de viagens
+
+O repositório é composto de 3 sistemas independentes:
+
+- [sistema-companhia-aerea](sistema-companhia-aerea)
+- [sistema-hotelaria](sistema-hotelaria)
+- [sistemas-locadora-veiculo](sistemas-locadora-veiculo)
+
+E um sistema de agência de viagens que se integra com os dois sistemas anteriores para permitir a venda de pacotes de viagem com passagem aérea, reserva de veículo e de hotel:
+
+- [sistema-agencia-viagem](sistema-agencia-viagem)
