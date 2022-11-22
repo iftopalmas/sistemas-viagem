@@ -20,4 +20,6 @@ public class Endereco {
     @NotNull
     @NotBlank
     private String cep;
+
+    private Cidade cidade;
 }
