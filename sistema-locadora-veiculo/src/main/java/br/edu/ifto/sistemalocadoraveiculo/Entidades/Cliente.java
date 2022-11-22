@@ -35,4 +35,6 @@ public class Cliente {
     @NotNull
     @NotBlank
     private String telefone;
+
+    private String email;
 }
