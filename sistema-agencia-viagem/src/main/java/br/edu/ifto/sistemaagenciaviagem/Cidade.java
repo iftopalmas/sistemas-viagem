@@ -10,7 +10,12 @@ public class Cidade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private  String estado_id;
+
+    public String getEstado() {
+        return Estado;
+    }
+
+    private  String Estado ;
 
     public Long getId() {
         return id;
@@ -28,11 +33,5 @@ public class Cidade {
         this.nome = nome;
     }
 
-    public String getEstado_id() {
-        return estado_id;
-    }
 
-    public void setEstado_id(String estado_id) {
-        this.estado_id = estado_id;
-    }
 }
