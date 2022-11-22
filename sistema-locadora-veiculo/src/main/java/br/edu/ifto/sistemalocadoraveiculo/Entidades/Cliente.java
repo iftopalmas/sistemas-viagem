@@ -24,5 +24,6 @@ public class Cliente {
     private String cpf;
 
     @NotNull
+    @NotBlank
     private String nome;
 }
