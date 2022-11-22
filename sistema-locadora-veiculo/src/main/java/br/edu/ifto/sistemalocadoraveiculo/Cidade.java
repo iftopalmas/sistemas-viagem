@@ -1,16 +1,24 @@
 package br.edu.ifto.sistemalocadoraveiculo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Cidade {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private String uf;
+
+    @ManyToOne
+    private Estado estado;
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
 
     public Long getId() {
         return id;
@@ -28,11 +36,5 @@ public class Cidade {
         this.nome = nome;
     }
 
-    public String getUf() {
-        return uf;
-    }
 
-    public void setUf(String uf) {
-        this.uf = uf;
-    }
 }
