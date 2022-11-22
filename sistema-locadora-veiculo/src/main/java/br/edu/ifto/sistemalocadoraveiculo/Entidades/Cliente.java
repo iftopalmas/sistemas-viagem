@@ -22,4 +22,6 @@ public class Cliente {
     @NotBlank
     @Column(unique = true)
     private String cpf;
+
+    private String nome;
 }
