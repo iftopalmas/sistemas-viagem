@@ -1,9 +1,8 @@
 package br.edu.ifto.sistemahotelaria.entidades;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.persistence.*;
 
 @Entity
 public class Cidade {
@@ -11,7 +10,17 @@ public class Cidade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private Long estado_id;
+    @ManyToOne()
+    private Estado estado;
+
+    public Cidade(String nome, Estado estado) {
+        this.nome = nome;
+        this.estado = estado;
+    }
+
+    public Cidade() {
+
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -27,13 +36,5 @@ public class Cidade {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Long getEstado_id() {
-        return estado_id;
-    }
-
-    public void setEstado_id(Long estado_id) {
-        this.estado_id = estado_id;
     }
 }

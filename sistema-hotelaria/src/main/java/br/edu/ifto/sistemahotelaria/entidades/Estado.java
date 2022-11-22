@@ -1,9 +1,7 @@
 package br.edu.ifto.sistemahotelaria.entidades;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Estado {
@@ -13,6 +11,9 @@ public class Estado {
     private Long id;
     private String nome;
     private String uf;
+
+    @OneToMany(mappedBy = "estado")
+    private List<Cidade> cidades;
 
     public void setId(Long id) {
         this.id = id;
