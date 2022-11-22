@@ -1,10 +1,12 @@
 package br.edu.ifto.sistemaagenciaviagem;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 @Entity
 public class Cidade {
     @Id
+    @GeneratedValue
     private Long id;
     private String nome;
     private  String estado_id;
