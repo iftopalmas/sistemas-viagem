@@ -36,4 +36,4 @@ nb-configuration.xml
 *.rej
 
 # Local environment
-sistema-agencia-viagem/src/main/resources/.env
+.env
