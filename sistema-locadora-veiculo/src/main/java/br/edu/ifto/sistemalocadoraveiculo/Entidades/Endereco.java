@@ -14,4 +14,6 @@ public class Endereco {
     @NotNull
     @NotBlank
     private String logradouro;
+
+    private String cep;
 }
