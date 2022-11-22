@@ -23,5 +23,6 @@ public class Cliente {
     @Column(unique = true)
     private String cpf;
 
+    @NotNull
     private String nome;
 }
