@@ -10,6 +10,9 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import lombok.Data;
+
+@Data
 @Entity
 public class Estado {
     @Id

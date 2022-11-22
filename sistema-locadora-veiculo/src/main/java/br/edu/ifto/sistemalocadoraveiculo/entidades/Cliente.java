@@ -13,6 +13,9 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.br.CPF;
 
+import lombok.Data;
+
+@Data
 @Entity
 public class Cliente {
     @Id
