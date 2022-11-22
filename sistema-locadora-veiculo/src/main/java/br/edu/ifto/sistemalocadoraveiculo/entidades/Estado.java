@@ -1,5 +1,7 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,4 +22,6 @@ public class Estado {
     @NotNull
     @NotBlank
     private String uf;
+
+    private List<Cidade> cidades;
 }
