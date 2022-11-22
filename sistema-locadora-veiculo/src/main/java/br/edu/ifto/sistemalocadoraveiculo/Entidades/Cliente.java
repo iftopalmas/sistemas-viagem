@@ -32,6 +32,6 @@ public class Cliente {
     @NotNull
     private LocalDate dataNascimento;
 
-    
+    @NotNull
     private String telefone;
 }
