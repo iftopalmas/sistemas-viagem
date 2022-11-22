@@ -36,6 +36,7 @@ public class Cliente {
     @NotBlank
     private String telefone;
 
+    @NotNull
     @Column(unique = true)
     private String email;
 }
