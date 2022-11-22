@@ -1,5 +1,6 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,5 +19,6 @@ public class Cidade{
     @NotBlank
     private String nome;
 
+    @ManyToOne(cascade = CascadeType.ALL)
     private Estado estado;
 }
