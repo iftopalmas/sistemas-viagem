@@ -38,4 +38,12 @@ public class Estado {
     public void setUf(String uf) {
         this.uf = uf;
     }
+
+    public List<Cidade> getCidades() {
+        return cidades;
+    }
+
+    public void setCidades(List<Cidade> cidades) {
+        this.cidades = cidades;
+    }
 }
