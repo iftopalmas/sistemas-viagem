@@ -1,5 +1,7 @@
 package br.edu.ifto.sistemalocadoraveiculo.Entidades;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,4 +28,6 @@ public class Cliente {
     @NotNull
     @NotBlank
     private String nome;
+
+    private LocalDate dataNascimento;
 }
