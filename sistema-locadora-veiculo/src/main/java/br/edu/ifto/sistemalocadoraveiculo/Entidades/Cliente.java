@@ -29,5 +29,6 @@ public class Cliente {
     @NotBlank
     private String nome;
 
+    @NotNull
     private LocalDate dataNascimento;
 }
