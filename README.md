@@ -1,3 +1,4 @@
+![CI](https://github.com/iftopalmas/sistemas-viagens/workflows/build/badge.svg)
 # Sistemas REST para gerenciamento de companhias aéreas, hotéis, locadoras de veículos e agências de viagens
 
 ## Introdução
