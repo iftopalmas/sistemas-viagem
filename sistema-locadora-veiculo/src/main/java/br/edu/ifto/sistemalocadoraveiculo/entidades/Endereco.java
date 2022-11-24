@@ -29,6 +29,5 @@ public class Endereco {
 
     @NotNull
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="cidade_cod", referencedColumnName = "id")
     private Cidade cidade;
 }
