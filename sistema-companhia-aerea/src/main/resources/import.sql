@@ -1430,7 +1430,6 @@ INSERT INTO Cidade (id, nome, estado_id) VALUES
      (1381, 'Conquista dOeste', 13),
      (1382, 'Cotriguaçu', 13),
      (1383, 'Cuiabá', 13),
-     (1384, 'Curvelândia', 13),
      (1385, 'Curvelândia', 13),
      (1386, 'Denise', 13),
      (1387, 'Diamantino', 13),
