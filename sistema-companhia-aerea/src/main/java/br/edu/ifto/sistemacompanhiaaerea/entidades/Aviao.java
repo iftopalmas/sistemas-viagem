@@ -2,6 +2,7 @@ package br.edu.ifto.sistemacompanhiaaerea.entidades;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Aviao {
@@ -12,6 +13,7 @@ public class Aviao {
     @OneToOne
     private MarcaAviao marca;
 
+    @NotBlank
     private String modelo;
     @Column(unique = true)
     private String prefixo;
