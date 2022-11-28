@@ -12,6 +12,8 @@ public class Aviao {
     @OneToOne
     private MarcaAviao marca;
 
+    private String modelo;
+
 
 
 
