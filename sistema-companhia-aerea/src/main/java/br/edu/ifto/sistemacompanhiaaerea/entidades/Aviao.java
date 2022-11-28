@@ -15,6 +15,7 @@ public class Aviao {
 
     @NotBlank
     private String modelo;
+    @NotBlank
     @Column(unique = true)
     private String prefixo;
     private int anoFabricacao;
