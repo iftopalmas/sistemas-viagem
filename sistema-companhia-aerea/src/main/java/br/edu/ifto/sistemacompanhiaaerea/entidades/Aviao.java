@@ -16,8 +16,5 @@ public class Aviao {
     @Column(unique = true)
     private String prefixo;
     private int anoFabricacao;
-
-
-
-
+    private int totalAssentos;
 }
