@@ -13,6 +13,8 @@ public class Aviao {
     private MarcaAviao marca;
 
     private String modelo;
+    @Column(unique = true)
+    private String prefixo;
 
 
 
