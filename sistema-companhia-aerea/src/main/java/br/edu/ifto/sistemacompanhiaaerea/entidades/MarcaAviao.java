@@ -1,2 +1,4 @@
-package br.edu.ifto.sistemacompanhiaaerea.entidades;public class MarcaAviao {
+package br.edu.ifto.sistemacompanhiaaerea.entidades;
+
+public class MarcaAviao {
 }
