@@ -15,6 +15,7 @@ public class Aviao {
     private String modelo;
     @Column(unique = true)
     private String prefixo;
+    private int anoFabricacao;
 
 
 
