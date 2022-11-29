@@ -25,5 +25,7 @@ public class Aviao {
     private String prefixo;
     @NotNull
     private int anoFabricacao;
+    @NotNull
+    @Min(1)
     private int totalAssentos;
 }
