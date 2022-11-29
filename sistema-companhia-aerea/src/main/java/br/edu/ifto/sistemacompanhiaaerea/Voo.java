@@ -30,9 +30,8 @@ public class Voo {
     @NotNull
     private Aviao aviao;
     
-    // @NotNull
-    // private Piloto piloto;
     // TODO: Depende de #51
+    // @NotNull private Piloto piloto;
 
     @NotNull
     private Aeroporto aeroportoOrigem;
