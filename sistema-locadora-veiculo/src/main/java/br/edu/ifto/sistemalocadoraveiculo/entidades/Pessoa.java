@@ -26,7 +26,6 @@ public class Pessoa {
 
   @NotNull
   @OneToOne
-  @JoinColumn(name = "id_endereco")
   private Endereco endereco;
 
   public Long getId() {
