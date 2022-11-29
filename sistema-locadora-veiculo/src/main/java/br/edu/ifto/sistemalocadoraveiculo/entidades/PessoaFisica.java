@@ -11,7 +11,6 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.br.CPF;
 
 @Entity
-@PrimaryKeyJoinColumn(name = "id_pessoa")
 public class PessoaFisica extends Pessoa {
   @CPF
   @NotNull
@@ -20,7 +19,6 @@ public class PessoaFisica extends Pessoa {
   private String cpf;
   
   @NotNull
-  @Column
   private LocalDate dataNascimento;
 
   public String getCpf() {
