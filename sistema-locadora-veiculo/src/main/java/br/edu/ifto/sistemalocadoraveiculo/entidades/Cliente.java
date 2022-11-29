@@ -16,12 +16,10 @@ import lombok.Data;
 @Entity
 public class Cliente {
     @OneToOne
-    @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
 
     @NotNull
     @NotBlank
-    @Column
     private String telefone;
 
     @Email
@@ -31,7 +29,6 @@ public class Cliente {
     private String email;
 
     @NotNull
-    @Column
     private LocalDate dataCadastro = LocalDate.now();
 
     public Pessoa getPessoa() {
