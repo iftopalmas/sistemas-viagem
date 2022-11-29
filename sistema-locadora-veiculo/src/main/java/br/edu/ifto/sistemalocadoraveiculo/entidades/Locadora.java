@@ -1,13 +1,13 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
 import com.sun.istack.NotNull;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Getters;
+import lombok.Setters;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Getters
+@Setters
 @Entity
 public class Locadora extends PessoaJuridica {
 
