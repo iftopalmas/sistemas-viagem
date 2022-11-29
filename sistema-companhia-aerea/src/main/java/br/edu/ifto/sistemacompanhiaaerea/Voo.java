@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Voo {
-    
+
     @NotBlank
     @Column(unique = true)
     private String numero;
@@ -36,10 +36,28 @@ public class Voo {
 
     // @NotNull
     // private Aeroporto aeroportoOrigem;
-
+    //
     // @NotNull
     // private Aeroporto aeroportoDestino;
+    //
+    // @Override
+    // public void setAeroportoOrigem(Aeroporto aeroportoOrigemArg) throws Exception{
+    //     if(this.getAeroportoDestino()!=null)
+    //     {
+    //         if(aeroportoOrigemArg.getCodigoIata().equals(this.getAeroportoDestino().getCodigoIata()))
+    //             throw new Exception("[ERRO] : Não foi possivel alterar o aeroporto de origem, pois ele já é o aeroporto de destino");
+    //     }
+    //     this.aeroportoOrigem = aeroportoOrigemArg;
+    // }
+    //
+    // @Override
+    // public void setAeroportoDestino(Aeroporto aeroportoDestinoArg) throws Exception{
+    //     if(this.getAeroportoOrigem()!=null)
+    //     {
+    //         if(aeroportoDestinoArg.getCodigoIata().equals(this.getAeroportoOrigem().getCodigoIata()))
+    //             throw new Exception("[ERRO] : Não foi possivel alterar o aeroporto de destino, pois ele já é o aeroporto de origem");
+    //     }
+    //     this.aeroportoDestino = aeroportoDestinoArg;
+    // }
     // TODO: Depende de #52
-    
-
 }
