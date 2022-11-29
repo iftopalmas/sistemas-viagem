@@ -5,11 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Getters;
-import lombok.Setters;
+import lombok.Getter;
+import lombok.Setter;
 
-@Getters
-@Setters
+@Getter
+@Setter
 @Entity
 public class PessoaJuridica {
 
