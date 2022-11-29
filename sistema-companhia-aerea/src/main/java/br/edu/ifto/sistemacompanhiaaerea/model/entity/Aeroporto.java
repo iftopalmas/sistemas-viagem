@@ -20,7 +20,7 @@ public class Aeroporto {
     @NotBlank
     @Column(unique = true)
     @NotBlank
-    private String codigolata;
+    private String codigoIata;
 
     public Long getId() {
         return id;
@@ -46,11 +46,11 @@ public class Aeroporto {
         this.cidade = cidade;
     }
 
-    public String getCodigolata() {
-        return codigolata;
+    public String getCodigoIata() {
+        return Iata;
     }
 
-    public void setCodigolata(String codigolata) {
-        this.codigolata = codigolata;
+    public void setCodigoIata(String codigoIata) {
+        this.codigoIata = codigoIata;
     }
 }
