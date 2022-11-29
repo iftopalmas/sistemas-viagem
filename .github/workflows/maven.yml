@@ -33,3 +33,18 @@ jobs:
         mvn -B package --file sistema-companhia-aerea/pom.xml
         mvn -B package --file sistema-hotelaria/pom.xml
         mvn -B package --file sistema-locadora-veiculo/pom.xml
+    - name: dependabot_sistema-agencia-viagem
+      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      run: maven-dependency-submission -d sistema-agencia-viagem/pom.xml
+
+    - name: dependabot_sistema-companhia-aerea
+      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      run: maven-dependency-submission -d sistema-companhia-aerea/pom.xml
+
+    - name: dependabot_sistema-hotelaria
+      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      run: maven-dependency-submission -d sistema-hotelaria/pom.xml
+
+    - name: dependabot_sistema-locadora-veiculo
+      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      run: maven-dependency-submission -d sistema-locadora-veiculo/pom.xml
