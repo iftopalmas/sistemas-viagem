@@ -1,10 +1,13 @@
-package br.edu.ifto.sistemalocadoraveiculo;
+package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
 import com.sun.istack.NotNull;
-import org.hibernate.annotations.NotFound;
+import lombok.Getter;
+import lombok.Setter;
+
 
 import javax.persistence.*;
 @Getter
+@Setter
 @Entity
 public class Locadora extends PessoaJuridica {
     @NotNull

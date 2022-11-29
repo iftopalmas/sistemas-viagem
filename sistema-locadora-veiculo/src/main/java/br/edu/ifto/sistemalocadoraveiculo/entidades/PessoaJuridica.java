@@ -1,4 +1,4 @@
-package br.edu.ifto.sistemalocadoraveiculo;
+package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
