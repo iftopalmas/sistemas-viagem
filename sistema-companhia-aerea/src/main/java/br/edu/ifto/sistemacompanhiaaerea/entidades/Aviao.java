@@ -16,6 +16,7 @@ public class Aviao {
     private Long id;
 
 
+    @NotNull
     @ManyToOne
     private MarcaAviao marca;
 
