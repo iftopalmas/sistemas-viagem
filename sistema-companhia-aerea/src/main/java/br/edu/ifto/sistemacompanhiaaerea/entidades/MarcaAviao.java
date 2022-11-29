@@ -1,6 +1,7 @@
 package br.edu.ifto.sistemacompanhiaaerea.entidades;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class MarcaAviao {
@@ -8,6 +9,7 @@ public class MarcaAviao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     @Column(unique = true)
     private String descricao;
 
