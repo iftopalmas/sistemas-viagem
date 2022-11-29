@@ -3,11 +3,17 @@ package br.edu.ifto.sistemacompanhiaaerea;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import br.edu.ifto.sistemacompanhiaaerea.entidades.Aviao;
+import lombok.Getter;
+import lombok.Setter;
 
+@Entity
+@Getter
+@Setter
 public class Voo {
     
     @NotBlank
