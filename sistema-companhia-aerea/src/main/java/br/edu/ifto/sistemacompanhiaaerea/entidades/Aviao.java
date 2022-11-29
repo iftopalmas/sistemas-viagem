@@ -15,7 +15,8 @@ public class Aviao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+
+    @ManyToOne
     private MarcaAviao marca;
 
     @NotBlank
