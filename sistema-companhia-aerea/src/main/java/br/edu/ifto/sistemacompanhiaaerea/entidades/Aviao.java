@@ -1,8 +1,13 @@
 package br.edu.ifto.sistemacompanhiaaerea.entidades;
 
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Aviao {
@@ -18,6 +23,7 @@ public class Aviao {
     @NotBlank
     @Column(unique = true)
     private String prefixo;
+    @NotNull
     private int anoFabricacao;
     private int totalAssentos;
 }
