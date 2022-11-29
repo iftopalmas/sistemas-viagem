@@ -27,7 +27,6 @@ public class Voo {
     private LocalDateTime dataHoraChegadaEsperada;
 
     @NotNull
-
     private Aviao aviao;
     
     // @NotNull
