@@ -8,10 +8,8 @@ import javax.persistence.OneToOne;
 @Entity
 public class Funcionario {
   @OneToOne
-  @JoinColumn(name = "id_pessoa_fisica")
   private PessoaFisica pessoaFisica;
 
-  @Column
   private String numeroCarteiraTrabalho;
 
   public PessoaFisica getPessoaFisica() {
