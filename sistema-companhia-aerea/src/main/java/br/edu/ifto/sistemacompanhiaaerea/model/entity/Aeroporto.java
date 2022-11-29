@@ -47,7 +47,7 @@ public class Aeroporto {
     }
 
     public String getCodigoIata() {
-        return Iata;
+        return codigoIata;
     }
 
     public void setCodigoIata(String codigoIata) {
