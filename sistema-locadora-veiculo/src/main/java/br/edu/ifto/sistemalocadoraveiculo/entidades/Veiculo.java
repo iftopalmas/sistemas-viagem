@@ -1,13 +1,14 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
-import lombok.Data;
-
+import lombok.Getter;
+import lombok.Setter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-@Data
+@Getter
+@Setter
 @Entity
 public class Veiculo {
     @NotBlank
@@ -23,4 +24,5 @@ public class Veiculo {
 
 
     private Locadora locadora;
+    //Falta a issue#54
 }
