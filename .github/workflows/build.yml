@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v3
   
     - name: dependabot_sistema-agencia-viagem
-      run: maven-dependency-submission -d sistema-agencia-viagem/pom.xml
+      run: advanced-security/maven-dependency-submission -d sistema-agencia-viagem/pom.xml
       
     - name: dependabot_sistema-companhia-aerea
       run: maven-dependency-submission -d sistema-companhia-aerea/pom.xml
