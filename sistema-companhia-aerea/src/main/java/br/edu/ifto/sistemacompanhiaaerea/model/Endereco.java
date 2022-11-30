@@ -8,7 +8,6 @@ import javax.validation.constraints.NotNull;
 public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Long id;
 
     @NotNull
@@ -20,7 +19,6 @@ public class Endereco {
     private String cep;
 
     @ManyToOne
-    @JoinColumn(name = "cidade_id")
     private Cidade cidade;
 
     private String bairro;

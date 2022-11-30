@@ -5,15 +5,12 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "contato_seguranca")
 public class ContatoSeguranca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "grau_parentesco_id")
     private GrauParentesco grauParentesco;
 
     @NotNull

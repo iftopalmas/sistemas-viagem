@@ -29,7 +29,6 @@ public class Cliente {
     private LocalDate dataNascimento;
 
     @ManyToOne
-    @JoinColumn(name = "endereco_id")
     @NotNull
     @NotBlank
     private Endereco endereco;
@@ -45,7 +44,6 @@ public class Cliente {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name = "contato_seguranca_id")
     private ContatoSeguranca contatoSeguranca;
 
     public Long getId() {
