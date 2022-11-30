@@ -1,4 +1,4 @@
-package br.edu.ifto.sistemacompanhiaaerea;
+package br.edu.ifto.sistemacompanhiaaerea.model;
 
 import javax.persistence.*;
 
