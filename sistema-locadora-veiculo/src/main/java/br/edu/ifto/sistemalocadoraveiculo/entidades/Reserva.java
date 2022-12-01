@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-
 public class Reserva {
 
     @Id
@@ -31,6 +30,7 @@ public class Reserva {
 
     @NotNull
     private Cliente cliente;
+
 
     //@NotNull
     //private  Locadora locadoraRetirada;
