@@ -37,7 +37,7 @@ jobs:
 
     - name: dependabot_sistemas-viagens
       run: |
-        maven-dependency-submission -d sistema-agencia-viagem/pom.xml
-        maven-dependency-submission -d sistema-companhia-aerea/pom.xml
-        maven-dependency-submission -d sistema-hotelaria/pom.xml
-        maven-dependency-submission -d sistema-locadora-veiculo/pom.xml
+        maven-dependency-submission -d sistema-agencia-viagem
+        maven-dependency-submission -d sistema-companhia-aerea
+        maven-dependency-submission -d sistema-hotelaria
+        maven-dependency-submission -d sistema-locadora-veiculo
