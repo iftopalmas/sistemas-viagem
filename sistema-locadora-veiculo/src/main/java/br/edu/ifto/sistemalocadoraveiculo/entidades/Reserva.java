@@ -21,7 +21,7 @@ public class Reserva {
     private  long id;
     
     @NotNull
-    private LocalDateTime dataHoraCadastro;
+    private LocalDateTime dataHoraCadastro = LocalDateTime.now();
 
     @NotNull
     private LocalDateTime dataHoraRetiradaEsperada;
