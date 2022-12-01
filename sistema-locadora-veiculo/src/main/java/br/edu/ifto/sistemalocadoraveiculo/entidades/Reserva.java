@@ -31,7 +31,6 @@ public class Reserva {
     @NotNull
     private Cliente cliente;
 
-
     //@NotNull
     //private  Locadora locadoraRetirada;
 
