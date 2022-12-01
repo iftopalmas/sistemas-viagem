@@ -23,11 +23,11 @@ public class Reserva {
     @NotNull
     private Cliente cliente;
 
-    @NotNull
-    private  Locadora locadoraRetirada;
+    //@NotNull
+    //private  Locadora locadoraRetirada;
 
-    @NotNull
-    private  Locadora locadoraDevolucao;
+    //@NotNull
+    //private  Locadora locadoraDevolucao;
 
 }
 
