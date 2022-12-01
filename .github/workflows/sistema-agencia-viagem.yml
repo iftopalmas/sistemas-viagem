@@ -1,0 +1,17 @@
+name: dependabot_sistema-agencia-viagem
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: advanced-security/maven-dependency-submission-action@v2.0.1
+        with:
+          directory: sistema-agencia-viagem
