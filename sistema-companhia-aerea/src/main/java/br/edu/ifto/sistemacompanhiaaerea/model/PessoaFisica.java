@@ -1,5 +1,7 @@
 package br.edu.ifto.sistemacompanhiaaerea.model;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.Column;
@@ -10,29 +12,17 @@ import java.time.LocalDate;
 
 @Entity
 public class PessoaFisica extends Pessoa {
-    @Column(unique = true)
     @CPF
     @NotNull
     @NotBlank
+    @Getter
+    @Setter
+    @Column(unique = true)
     private String cpf;
 
     @NotNull
     @NotBlank
+    @Getter
+    @Setter
     private LocalDate dataNascimento;
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
 }
