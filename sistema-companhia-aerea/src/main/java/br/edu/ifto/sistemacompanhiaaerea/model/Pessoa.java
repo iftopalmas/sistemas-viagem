@@ -7,24 +7,20 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+@Getter
+@Setter
 @Entity
 public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
     private Long  id;
 
     @NotNull
     @NotBlank
-    @Getter
-    @Setter
     private String nome;
 
     @ManyToOne
     @NotNull
     @NotBlank
-    @Getter
-    @Setter
     private Endereco endereco;
 }
