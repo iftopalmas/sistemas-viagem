@@ -11,18 +11,16 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
+@Getter
+@Setter
 public class PessoaFisica extends Pessoa {
     @CPF
     @NotNull
     @NotBlank
-    @Getter
-    @Setter
     @Column(unique = true)
     private String cpf;
 
     @NotNull
     @NotBlank
-    @Getter
-    @Setter
     private LocalDate dataNascimento;
 }
