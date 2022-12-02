@@ -12,26 +12,7 @@ import java.time.LocalDate;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long  id;
-
-    @Column(unique = true)
-    @CPF
-    @NotNull
-    @NotBlank
-    private String cpf;
-
-    @NotNull
-    @NotBlank
-    private String nome;
-
-    @NotNull
-    @NotBlank
-    private LocalDate dataNascimento;
-
-    @ManyToOne
-    @NotNull
-    @NotBlank
-    private Endereco endereco;
+    private Long id;
 
     @NotNull
     @NotBlank
@@ -52,38 +33,6 @@ public class Cliente {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
 
     public String getTelefone() {

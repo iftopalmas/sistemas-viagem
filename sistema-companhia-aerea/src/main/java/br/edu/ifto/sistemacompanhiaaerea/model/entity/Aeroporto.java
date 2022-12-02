@@ -1,6 +1,6 @@
 package br.edu.ifto.sistemacompanhiaaerea.model.entity;
 
-import br.edu.ifto.sistemacompanhiaaerea.Cidade;
+import br.edu.ifto.sistemacompanhiaaerea.model.Cidade;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
