@@ -1,0 +1,18 @@
+name: dependabot_sistema-companhia-aerea
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: advanced-security/maven-dependency-submission-action@v2.0.1
+        with:
+          directory: sistema-companhia-aerea
