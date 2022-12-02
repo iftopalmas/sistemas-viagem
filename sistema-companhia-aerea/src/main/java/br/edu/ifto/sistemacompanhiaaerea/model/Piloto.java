@@ -9,28 +9,22 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
+@Getter
+@Setter
 public class Piloto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
     private Long id;
 
     @ManyToOne
-    @Getter
-    @Setter
     private PessoaFisica pessoaFisica;
 
     @NotNull
     @NotBlank
-    @Getter
-    @Setter
     @Column(unique = true)
     private String numeroBreve;
 
     @NotNull
     @NotBlank
-    @Getter
-    @Setter
     private LocalDate validadeBreve;
 }
