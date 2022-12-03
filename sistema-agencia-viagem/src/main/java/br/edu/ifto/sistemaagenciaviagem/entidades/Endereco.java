@@ -2,11 +2,9 @@ package br.edu.ifto.sistemaagenciaviagem.entidades;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
@@ -17,5 +15,9 @@ public class Endereco {
 
     @NotBlank
     private String logradouro;
+
+    @NotNull
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Cidade cidade;
 
 }
