@@ -1,12 +1,11 @@
 package br.edu.ifto.sistemaagenciaviagem.entidades;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.br.CPF;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -17,4 +16,8 @@ public class Cliente {
 
     @NotBlank
     private String nome;
+
+    @CPF
+    @Column(unique = true)
+    private String cpf;
 }
