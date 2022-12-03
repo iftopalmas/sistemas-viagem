@@ -22,4 +22,7 @@ public class Cliente {
     private String cpf;
 
     private LocalDate dataNascimento;
+
+    @NotBlank
+    private String celular;
 }
