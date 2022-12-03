@@ -20,4 +20,6 @@ public class Cliente {
     @CPF
     @Column(unique = true)
     private String cpf;
+
+    private LocalDate dataNascimento;
 }
