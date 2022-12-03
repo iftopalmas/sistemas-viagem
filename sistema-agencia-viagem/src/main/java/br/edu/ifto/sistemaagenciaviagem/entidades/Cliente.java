@@ -27,4 +27,7 @@ public class Cliente {
     private String celular;
 
     private boolean fumante;
+
+    @ManyToOne
+    private Endereco endereco;
 }
