@@ -20,4 +20,6 @@ public class Endereco {
     @ManyToOne(cascade = CascadeType.ALL)
     private Cidade cidade;
 
+    private String bairro;
+
 }
