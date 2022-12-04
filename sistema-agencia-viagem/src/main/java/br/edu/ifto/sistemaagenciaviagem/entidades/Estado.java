@@ -17,4 +17,7 @@ public class Estado {
 
     @NotBlank
     private String nome;
+
+    @NotBlank
+    private String uf;
 }
