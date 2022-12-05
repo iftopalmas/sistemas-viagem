@@ -16,7 +16,7 @@ public class Piloto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    @OneToOne
     private PessoaFisica pessoaFisica;
 
     @NotNull
