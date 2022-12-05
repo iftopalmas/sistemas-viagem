@@ -27,15 +27,19 @@ public class Voo {
     private LocalDateTime dataHoraChegadaEsperada;
 
     @NotNull
+    @OneToOne
     private Aviao aviao;
 
-    // TODO: Depende de #51
-    // @NotNull private Piloto piloto;
+    @NotNull
+    @ManyToOne
+    private Piloto piloto;
 
     @NotNull
+    @OneToOne
     private Aeroporto aeroportoOrigem;
 
     @NotNull
+    @OneToOne
     private Aeroporto aeroportoDestino;
 
     public void setAeroportoOrigem(Aeroporto aeroportoOrigemArg) throws Exception {
