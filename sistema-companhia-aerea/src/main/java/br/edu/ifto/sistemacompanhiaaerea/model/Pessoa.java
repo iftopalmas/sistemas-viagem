@@ -4,28 +4,23 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
 @Entity
-public class Cliente {
+public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long  id;
 
     @NotNull
     @NotBlank
-    private String telefone;
-
-    @Column(unique = true)
-    @Email
-    @NotNull
-    @NotBlank
-    private String email;
+    private String nome;
 
     @ManyToOne
-    private ContatoSeguranca contatoSeguranca;
+    @NotNull
+    @NotBlank
+    private Endereco endereco;
 }

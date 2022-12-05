@@ -4,28 +4,27 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
+@Entity
 @Getter
 @Setter
-@Entity
-public class Cliente {
+public class Piloto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @OneToOne
+    private PessoaFisica pessoaFisica;
+
     @NotNull
     @NotBlank
-    private String telefone;
-
     @Column(unique = true)
-    @Email
+    private String numeroBreve;
+
     @NotNull
     @NotBlank
-    private String email;
-
-    @ManyToOne
-    private ContatoSeguranca contatoSeguranca;
+    private LocalDate validadeBreve;
 }
