@@ -1,9 +1,14 @@
 package br.edu.ifto.sistemacompanhiaaerea.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+@Getter
+@Setter
 @Entity
 public class ContatoSeguranca {
     @Id
@@ -20,36 +25,4 @@ public class ContatoSeguranca {
     @NotNull
     @NotBlank
     private String nome;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public GrauParentesco getGrauParentesco() {
-        return grauParentesco;
-    }
-
-    public void setGrauParentesco(GrauParentesco grauParentesco) {
-        this.grauParentesco = grauParentesco;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 }

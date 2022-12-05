@@ -1,9 +1,14 @@
 package br.edu.ifto.sistemacompanhiaaerea.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+@Getter
+@Setter
 @Entity
 public class CompanhiaAerea {
     @Id
@@ -14,28 +19,4 @@ public class CompanhiaAerea {
     private String nome;
     @NotNull
     private String programaMilhas;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getProgramaMilhas() {
-        return programaMilhas;
-    }
-
-    public void setProgramaMilhas(String programaMilhas) {
-        this.programaMilhas = programaMilhas;
-    }
 }
