@@ -1,4 +1,4 @@
-package br.edu.ifto.sistemacompanhiaaerea.model.entity;
+package br.edu.ifto.sistemacompanhiaaerea.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;

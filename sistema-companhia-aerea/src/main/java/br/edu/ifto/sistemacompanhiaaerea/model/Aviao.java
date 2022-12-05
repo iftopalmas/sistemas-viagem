@@ -1,10 +1,7 @@
-package br.edu.ifto.sistemacompanhiaaerea.entidades;
+package br.edu.ifto.sistemacompanhiaaerea.model;
 
-
-import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -14,7 +11,6 @@ public class Aviao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
 
     @NotNull
     @ManyToOne
