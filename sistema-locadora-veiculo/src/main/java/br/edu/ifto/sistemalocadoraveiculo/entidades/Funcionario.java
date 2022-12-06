@@ -1,8 +1,6 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
