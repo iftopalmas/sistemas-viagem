@@ -31,9 +31,10 @@ public class Reserva {
     @NotNull
     private Cliente cliente;
 
-    //@NotNull private  Locadora locadoraRetirada;  TODO: Depende de #54
+    @NotNull private  Locadora locadoraRetirada;
 
-    //@NotNull private  Locadora locadoraDevolucao; TODO: Depende de #54
+    @NotNull private  Locadora locadoraDevolucao;
 
+    @NotNull private Veiculo Veiculo;
 }
 

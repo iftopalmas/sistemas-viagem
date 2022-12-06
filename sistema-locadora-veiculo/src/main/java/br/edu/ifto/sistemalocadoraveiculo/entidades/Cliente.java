@@ -2,9 +2,7 @@ package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -16,6 +14,10 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Cliente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private  long id;
+
     @OneToOne
     private Pessoa pessoa;
 
