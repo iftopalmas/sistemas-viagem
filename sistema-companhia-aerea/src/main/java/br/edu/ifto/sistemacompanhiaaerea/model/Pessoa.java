@@ -10,23 +10,17 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @Entity
-public class Endereco {
+public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long  id;
 
     @NotNull
     @NotBlank
-    private String logradouro;
-
-    @NotNull
-    @NotBlank
-    private String cep;
+    private String nome;
 
     @ManyToOne
-    private Cidade cidade;
-
-    private String bairro;
-
-    private String numero;
+    @NotNull
+    @NotBlank
+    private Endereco endereco;
 }

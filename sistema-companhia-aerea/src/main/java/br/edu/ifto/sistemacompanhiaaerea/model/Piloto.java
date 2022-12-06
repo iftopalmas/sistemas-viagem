@@ -6,27 +6,25 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
+@Entity
 @Getter
 @Setter
-@Entity
-public class Endereco {
+public class Piloto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @NotBlank
-    private String logradouro;
+    @OneToOne
+    private PessoaFisica pessoaFisica;
 
     @NotNull
     @NotBlank
-    private String cep;
+    @Column(unique = true)
+    private String numeroBreve;
 
-    @ManyToOne
-    private Cidade cidade;
-
-    private String bairro;
-
-    private String numero;
+    @NotNull
+    @NotBlank
+    private LocalDate validadeBreve;
 }

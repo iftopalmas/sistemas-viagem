@@ -10,23 +10,22 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @Entity
-public class Endereco {
+public class Aeroporto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotNull
     @NotBlank
-    private String logradouro;
-
-    @NotNull
-    @NotBlank
-    private String cep;
-
+    @Column(unique = true)
+    private String nome;
     @ManyToOne
+    @NotNull
     private Cidade cidade;
+    @NotBlank
+    @Column(unique = true)
+    @NotBlank
+    private String codigoIata;
 
-    private String bairro;
-
-    private String numero;
+    public String getCodigoIata() {
+        return codigoIata;
+    }
 }
