@@ -1,6 +1,8 @@
 package br.edu.ifto.sistemaagenciaviagem.entidades;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
@@ -9,6 +11,8 @@ import java.time.LocalDate;
 
 @Data
 @Entity
+@Getter
+@Setter
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
