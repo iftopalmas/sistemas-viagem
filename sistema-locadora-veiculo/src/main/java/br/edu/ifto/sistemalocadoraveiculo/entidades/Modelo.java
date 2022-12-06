@@ -11,7 +11,6 @@ import javax.validation.constraints.NotNull;
 @Setter
 @Entity
 public class Modelo {
-
     @NotBlank
     @Column(unique = true)
     private String descricao;
