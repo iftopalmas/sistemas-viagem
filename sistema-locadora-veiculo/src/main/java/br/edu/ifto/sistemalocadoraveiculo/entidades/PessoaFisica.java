@@ -7,9 +7,13 @@ import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
 
 @Entity
+@Getter
+@Setter
 public class PessoaFisica extends Pessoa {
   @CPF
   @NotNull
