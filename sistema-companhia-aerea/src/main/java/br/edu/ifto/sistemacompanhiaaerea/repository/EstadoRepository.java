@@ -15,5 +15,5 @@ public interface EstadoRepository extends PagingAndSortingRepository<Estado, Lon
 
     List<Estado> findEstadosByUf(@Param("uf") String uf);
 
-    List<Estado> findAllBy();
+    List<Estado> findAll();
 }
