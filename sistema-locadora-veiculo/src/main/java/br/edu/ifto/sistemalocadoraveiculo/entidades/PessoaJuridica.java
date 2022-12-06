@@ -3,12 +3,12 @@ package br.edu.ifto.sistemalocadoraveiculo.entidades;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.br.CNPJ;
 
-@Data
+@Getter
+@Setter
 @Entity
 public class PessoaJuridica {
 
