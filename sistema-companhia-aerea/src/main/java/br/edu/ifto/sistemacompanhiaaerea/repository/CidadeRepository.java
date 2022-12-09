@@ -10,5 +10,6 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "cidades", path = "cidades")
 public interface CidadeRepository extends PagingAndSortingRepository<Cidade, Long> {
     Cidade findCidadeById(@Param("id") Long id);
+    Cidade findCidadeByNome(@Param("nome") String nome);
 
 }
