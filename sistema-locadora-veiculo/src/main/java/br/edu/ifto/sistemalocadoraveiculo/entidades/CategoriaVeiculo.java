@@ -1,18 +1,35 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
-import javax.persistence.Column;
-import javax.persistence.Entity;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
 @Entity
 public class CategoriaVeiculo {
-    @NotBlank
+    @Getter(AccessLevel.NONE)
+    @Setter(AccessLevel.NONE)
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", nullable = false)
+    private Long id;
+
+    @NotNull
     @Column(unique = true)
     private String descricao;
-    @NotBlank
+    @NotNull
     private String detalhes;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
