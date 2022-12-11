@@ -15,5 +15,6 @@ public interface MarcaAviaoRepository extends PagingAndSortingRepository<MarcaAv
 
     void updateMarcaAviao(@Param("MarcaAviao") MarcaAviao marcaAviao);
 
-    
+    void deleteMarcaAviaoById(@Param("id") Long id);
+
 }
