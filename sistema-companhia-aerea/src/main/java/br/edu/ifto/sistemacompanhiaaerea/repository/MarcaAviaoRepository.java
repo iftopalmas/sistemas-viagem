@@ -10,4 +10,7 @@ public interface MarcaAviaoRepository extends PagingAndSortingRepository<MarcaAv
     MarcaAviao findMarcaAviaoById(@Param("id") Long id);
 
     MarcaAviao findMarcaAviaoByDescricao(@Param("descricao") String descricao);
+
+    void saveMarcaAviao(@Param("MarcaAviao") MarcaAviao marcaAviao);
+
 }
