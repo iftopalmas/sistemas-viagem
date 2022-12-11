@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 public class Pessoa {
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @NotNull
@@ -28,24 +28,4 @@ public class Pessoa {
   @NotNull
   @OneToOne
   private Endereco endereco;
-
-  public Long getId() {
-    return this.id;
-  }
-
-  public String getNome() {
-    return this.nome;
-  }
-
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
-
-  public Endereco getEndereco() {
-    return this.endereco;
-  }
-
-  public void setEndereco(Endereco endereco) {
-    this.endereco = endereco;
-  }
 }
