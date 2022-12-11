@@ -9,4 +9,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 public interface MarcaAviaoRepository extends PagingAndSortingRepository<MarcaAviao, Long> {
     MarcaAviao findMarcaAviaoById(@Param("id") Long id);
 
+    MarcaAviao findMarcaAviaoByDescricao(@Param("descricao") String descricao);
 }
