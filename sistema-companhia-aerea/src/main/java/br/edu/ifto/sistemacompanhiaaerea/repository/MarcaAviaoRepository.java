@@ -5,6 +5,8 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+import java.util.List;
+
 @RepositoryRestResource(collectionResourceRel = "marcasAvioes", path = "marcasAvioes")
 public interface MarcaAviaoRepository extends PagingAndSortingRepository<MarcaAviao, Long> {
     MarcaAviao findMarcaAviaoById(@Param("id") Long id);
@@ -16,5 +18,7 @@ public interface MarcaAviaoRepository extends PagingAndSortingRepository<MarcaAv
     void updateMarcaAviao(@Param("MarcaAviao") MarcaAviao marcaAviao);
 
     void deleteMarcaAviaoById(@Param("id") Long id);
+
+    List<MarcaAviao> findAll();
 
 }
