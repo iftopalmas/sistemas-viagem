@@ -17,9 +17,11 @@ public interface VooRepository extends PagingAndSortingRepository <Voo , Long> {
     @GetMapping("/numero/{numero}")
     Optional <Voo> findByNumero(@Param("numero") String numero);
 
-    List <Aeroporto> findByAeroportoOrigem (@Param("aeroportoOrigem")Long aeroportoOrigem);
+    @GetMapping("/origem/{aeroportoId}")
+    List <Aeroporto> findByAeroportoOrigem (@Param("aeroportoId") Long aeroportoId);
 
-    List <Aeroporto> findByAeroportoDestino(@Param("aeroportoDestino")Long aeroportoDestino);
+    @GetMapping("/destino/{aeroportoId}")
+    List <Aeroporto> findByAeroportoDestino(@Param("aeroportooId") Long aeroportoId);
 
     List<CompanhiaAerea> findByNome(@Param("nome") String nome);
 }
