@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@RepositoryRestResource (collectionResourceRel ="voos",path = "voos")
+@RepositoryRestResource (collectionResourceRel ="voos", path = "voos")
 public interface VooRepository extends PagingAndSortingRepository <Voo , Long> {
     @GetMapping("/numero/{numero}")
     Optional <Voo> findByNumero(@Param("numero") String numero);
