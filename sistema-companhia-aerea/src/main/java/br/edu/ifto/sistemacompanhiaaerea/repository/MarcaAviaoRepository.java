@@ -9,8 +9,6 @@ import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "marcasAvioes", path = "marcasAvioes")
 public interface MarcaAviaoRepository extends PagingAndSortingRepository<MarcaAviao, Long> {
-    MarcaAviao findMarcaAviaoById(@Param("id") Long id);
-
     MarcaAviao findMarcaAviaoByDescricao(@Param("descricao") String descricao);
 
     void saveMarcaAviao(@Param("MarcaAviao") MarcaAviao marcaAviao);
