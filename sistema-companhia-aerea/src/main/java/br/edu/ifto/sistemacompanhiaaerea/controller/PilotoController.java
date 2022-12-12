@@ -2,9 +2,7 @@ package br.edu.ifto.sistemacompanhiaaerea.controller;
 
 import br.edu.ifto.sistemacompanhiaaerea.model.Piloto;
 import br.edu.ifto.sistemacompanhiaaerea.repository.PilotoRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,5 +28,10 @@ public class PilotoController {
     @GetMapping("/pilotos/cpf/{cpf}")
     public Piloto findByPessoaFisicaCpf(@PathVariable String cpf) {
         return repository.findByPessoaFisicaCpf(cpf).orElseThrow();
+    }
+
+    @PostMapping("/pilotos")
+    public void save(@RequestBody Piloto piloto) {
+        repository.save(piloto);
     }
 }
