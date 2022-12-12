@@ -11,7 +11,7 @@ import br.edu.ifto.sistemalocadoraveiculo.entidades.Veiculo;
 
 @RepositoryRestResource(collectionResourceRel = "veiculos", path = "veiculos")
 public interface VeiculoRepository extends PagingAndSortingRepository<Veiculo, Long> {
-  List<Veiculo> findByPlaca(@Param("placa") String placa);
+  Veiculo findByPlaca(@Param("placa") String placa);
   List<Veiculo> findByLocadoraId(@Param("locadoraId") String locadoraId);
   List<Veiculo> findByLocadoraIdAndCategoria(@Param("locadoraId") long locadoraId, @Param("categoriaId") long categoriaId);
   List<Veiculo> findByModelo(@Param("modeloId") long modeloId);
