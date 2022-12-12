@@ -26,4 +26,9 @@ public class PilotoController {
     public Piloto findById(@PathVariable Long id) {
         return repository.findById(id).orElseThrow();
     }
+
+    @GetMapping("/pilotos/cpf/{cpf}")
+    public Piloto findByPessoaFisicaCpf(@PathVariable String cpf) {
+        return repository.findByPessoaFisicaCpf(cpf).orElseThrow();
+    }
 }
