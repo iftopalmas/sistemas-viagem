@@ -16,7 +16,7 @@ public class Piloto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.ALL)
     private PessoaFisica pessoaFisica;
 
     @NotNull

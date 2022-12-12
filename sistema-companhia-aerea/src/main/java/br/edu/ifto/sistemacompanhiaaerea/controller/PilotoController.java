@@ -34,4 +34,9 @@ public class PilotoController {
     public void save(@RequestBody Piloto piloto) {
         repository.save(piloto);
     }
+
+    @PutMapping("/pilotos/{id}")
+    public void update(@RequestBody Piloto piloto) {
+        repository.save(piloto);
+    }
 }
