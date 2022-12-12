@@ -13,8 +13,6 @@ import java.util.Optional;
 
 @RepositoryRestResource (collectionResourceRel ="voos",path = "voos")
 public interface VooRepository extends PagingAndSortingRepository <Voo , Long> {
-  
-    Voo findByVooId(@Param("id") Long id);
     Optional <Voo> findByNumero(@Param("numero") String numero);
 
     List <Aeroporto> findByAeroportoOrigem (@Param("aeroportoOrigem")Long aeroportoOrigem);
