@@ -1,6 +1,10 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,27 +13,25 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import lombok.Getter;
-import lombok.Setter;
-
-
-@Entity
 @Getter
 @Setter
-public class Endereco {
+@Entity
+public class Veiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     @NotBlank
-    private String logradouro;
+    @Column(unique = true)
+    private String placa;
 
-    @NotNull
-    @NotBlank
-    private String cep;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Modelo modelo;
 
     @NotNull
     @ManyToOne(cascade = CascadeType.ALL)
-    private Cidade cidade;
+    private CategoriaVeiculo categoria;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Locadora locadora;
 }
