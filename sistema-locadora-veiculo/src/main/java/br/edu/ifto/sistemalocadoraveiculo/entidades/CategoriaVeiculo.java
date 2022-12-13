@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
@@ -14,9 +14,9 @@ public class CategoriaVeiculo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @NotNull
+    @NotBlank
     @Column(unique = true)
     private String descricao;
-    @NotNull
+    @NotBlank
     private String detalhes;
 }
