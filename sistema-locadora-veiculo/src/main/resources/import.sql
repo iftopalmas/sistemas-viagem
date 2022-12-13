@@ -5594,62 +5594,64 @@ INSERT INTO Cidade (id, nome, estado_id) VALUES
                                              (5564, 'Xambioá', 27);
 
 
-             INSERT INTO aeroporto (nome, cidade_id, codigoIata);
+           INSERT INTO aeroporto (nome, cidade_id, codigoIata);
 
                 ('Brigadeiro Lysias Rodrigues',5514,'PMW'),
                 ('Santos Dumont',3658,'SDU');
 
-             INSERT INTO aviao (marca, modelo, prefixo, anoFabricacao , totalAssentos);
+           INSERT INTO marcaAviao (descricao);
+
+                 ('Boeing'),
+                 ('Airbus');
+
+           INSERT INTO aviao (marca, modelo, prefixo, anoFabricacao , totalAssentos);
 
                 ('Boeing','Boeing 707','PT', 2019 , 120),
                 ('Airbus','Airbus 380','PR', 2020 , 130);
 
-             INSERT INTO cliente  (telefone, email, contatoSeguranca);
+           INSERT INTO grauParentesco (descricao);
 
-                ('99211-1213','carlos@gmail.com',1),
-                ('99212-1314','jorge@gmail.com',2);
+                           ('Pai'),
+                           ('Tio');
 
-             INSERT INTO CompanhiaAerea (nome,programaMilhas);
-
-                ('Gol','Smiles'),
-                ('Azul','TudoAzul');
-
-             INSERT INTO contatoSeguranca (grauParentesco, telefone, nome);
+           INSERT INTO contatoSeguranca (grauParentesco, telefone, nome);
 
                 ('Pai','99283-1010','Claudisney'),
                 ('Tio','99283-1111','Claudismar');
 
+           INSERT INTO pessoaFisica (cpf,dataNascimento);
 
-             INSERT INTO endereco (logradouro,cep,cidade,bairro,numero);
+                           ('01111111121', 10/10/2010),
+                           ('02222222221',12/12/2012);
+
+           INSERT INTO cliente  (telefone, email, contatoSeguranca);
+
+                ('99211-1213','carlos@gmail.com',1),
+                ('99212-1314','jorge@gmail.com',2);
+
+           INSERT INTO CompanhiaAerea (nome,programaMilhas);
+
+                ('Gol','Smiles'),
+                ('Azul','TudoAzul');
+
+           INSERT INTO endereco (logradouro,cep,cidade,bairro,numero);
 
                 ('504 Norte','77002-025','Palmas','Plano diretor norte','3'),
                 ('405 Norte ','77002-026','Palmas','Plano diertor norte ','4');
 
-             INSERT INTO grauParentesco (descricao);
 
-                ('Pai'),
-                ('Tio');
-
-             INSERT INTO marcaAviao (descricao);
-
-                ('Boeing'),
-                ('Airbus');
-
-             INSERT INTO pessoa (nome,endereco);
+           INSERT INTO pessoa (nome,endereco);
 
                 ('Carlos', 1 ),
                 ('Jorge',2);
 
-             INSERT INTO pessoaFisica (cpf,dataNascimento);
 
-                ('01111111121', 10/10/2010),
-                ('02222222221',12/12/2012);
 
-             INSERT INTO piloto (pessoaFisica,numeroBreve,validadeBreve);
+           INSERT INTO piloto (pessoaFisica,numeroBreve,validadeBreve);
 
                 (1,'12',28/12/2029),
                 (2,'33',20/06/2026);
-             INSERT INTO voo (numero,dataHoraPartidaEsperada,dataHoraChegadaEsperada,aviao,piloto,aeroportoOrigem,aeroportoDestino);
+           INSERT INTO voo (numero,dataHoraPartidaEsperada,dataHoraChegadaEsperada,aviao,piloto,aeroportoOrigem,aeroportoDestino);
 
                 ('10',10:00, 20:00,1,2,1,2),
                 ('10',09:00, 19:00,2,1,2,1);
