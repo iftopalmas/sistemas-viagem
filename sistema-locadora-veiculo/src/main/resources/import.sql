@@ -5649,9 +5649,9 @@ INSERT INTO Cidade (id, nome, estado_id) VALUES
 
            INSERT INTO piloto (pessoaFisica,numeroBreve,validadeBreve);
 
-                (1,'12',28/12/2029),
-                (2,'33',20/06/2026);
+                (1,'12','28/12/2029'),
+                (2,'33','20/06/2026');
            INSERT INTO voo (numero,dataHoraPartidaEsperada,dataHoraChegadaEsperada,aviao,piloto,aeroportoOrigem,aeroportoDestino);
 
-                ('10',10:00, 20:00,1,2,1,2),
-                ('10',09:00, 19:00,2,1,2,1);
+                ('10','10:00', '20:00',1,2,1,2),
+                ('10','09:00', '19:00',2,1,2,1);
