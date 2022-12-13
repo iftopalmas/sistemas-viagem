@@ -9,14 +9,12 @@ import org.springframework.data.repository.query.Param;
 import java.util.Optional;
 import java.util.List;
 
-@RepositoryRestResource (collectionResourceRel ="",path ="")
+@RepositoryRestResource (collectionResourceRel ="ReservaRepository",path ="ReservaRepository")
 public interface ReservaRepository extends PagingAndSortingRepository <Reserva, Long> {
-    @Override
-    Optional<Reserva> findById(@Param("Id")Long id);
 
-    Optional<Cliente> findreservaIdcliente(@Param("Id") Long id);
+    Optional<Cliente> findreservaIdcliente(@Param("id") Long id);
 
-    List <Reserva> findByIdlocadoraRetirada (@Param("Id")Long id);
+    List <Reserva> findByIdlocadoraRetirada (@Param("id")Long id);
 
-    List <Reserva> findByIdlocadoraDevolucao (@Param("Id")Long id);
+    List <Reserva> findByIdlocadoraDevolucao (@Param("id")Long id);
 }
