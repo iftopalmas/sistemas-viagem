@@ -12,9 +12,8 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 public class Reserva {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;
     
     @NotNull
@@ -28,6 +27,7 @@ public class Reserva {
 
     @ManyToOne
     @NotNull
+    @OneToOne
     private Cliente cliente;
 
     @ManyToOne

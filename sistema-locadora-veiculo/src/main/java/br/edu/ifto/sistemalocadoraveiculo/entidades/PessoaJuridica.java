@@ -11,7 +11,6 @@ import org.hibernate.validator.constraints.br.CNPJ;
 @Setter
 @Entity
 public class PessoaJuridica {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

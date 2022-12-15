@@ -15,8 +15,7 @@ import lombok.Setter;
 @Entity
 public class Cliente {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private  long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @OneToOne
     private Pessoa pessoa;
@@ -33,36 +32,4 @@ public class Cliente {
 
     @NotNull
     private LocalDate dataCadastro = LocalDate.now();
-
-    public Pessoa getPessoa() {
-        return this.pessoa;
-    }
-
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
-    }
-
-    public String getTelefone() {
-        return this.telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public LocalDate getDataCadastro() {
-        return this.dataCadastro;
-    }
-
-    public void setDataCadastro(LocalDate dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
 }

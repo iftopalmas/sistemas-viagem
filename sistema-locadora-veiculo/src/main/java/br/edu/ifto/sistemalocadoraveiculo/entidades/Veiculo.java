@@ -3,10 +3,7 @@ package br.edu.ifto.sistemalocadoraveiculo.entidades;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -14,6 +11,10 @@ import javax.validation.constraints.NotNull;
 @Setter
 @Entity
 public class Veiculo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @NotBlank
     @Column(unique = true)
     private String placa;

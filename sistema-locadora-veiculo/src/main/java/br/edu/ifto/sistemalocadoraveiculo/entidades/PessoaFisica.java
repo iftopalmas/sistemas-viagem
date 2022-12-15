@@ -4,6 +4,9 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -15,29 +18,16 @@ import org.hibernate.validator.constraints.br.CPF;
 @Getter
 @Setter
 public class PessoaFisica extends Pessoa {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+
   @CPF
   @NotNull
   @NotBlank
   @Column(unique = true)
   private String cpf;
-  
+
   @NotNull
   private LocalDate dataNascimento;
-
-  public String getCpf() {
-    return cpf;
-  }
-
-  public void setCpf(String cpf) {
-    this.cpf = cpf;
-  }
-
-
-  public LocalDate getDataNascimento() {
-    return dataNascimento;
-  }
-
-  public void setDataNascimento(LocalDate dataNascimento) {
-    this.dataNascimento = dataNascimento;
-  }
 }
