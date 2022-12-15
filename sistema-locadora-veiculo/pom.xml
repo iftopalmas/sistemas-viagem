@@ -60,7 +60,11 @@
 			<version>1.18.24</version>
 			<scope>provided</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-rest-core</artifactId>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

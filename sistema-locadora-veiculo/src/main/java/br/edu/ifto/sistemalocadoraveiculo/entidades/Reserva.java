@@ -2,11 +2,8 @@ package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
 import lombok.Getter;
 import lombok.Setter;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
@@ -28,13 +25,18 @@ public class Reserva {
     @NotNull
     private LocalDateTime dataHoraDevolucaoEsperada;
 
+    @ManyToOne
     @NotNull
     @OneToOne
     private Cliente cliente;
 
-    //@NotNull private  Locadora locadoraRetirada;  TODO: Depende de #54
+    @ManyToOne
+    @NotNull private  Locadora locadoraRetirada;
 
-    //@NotNull private  Locadora locadoraDevolucao; TODO: Depende de #54
+    @ManyToOne
+    @NotNull private  Locadora locadoraDevolucao;
 
+    @ManyToOne
+    @NotNull private Veiculo Veiculo;
 }
 
