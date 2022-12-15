@@ -19,8 +19,7 @@ public class Pessoa {
     @NotBlank
     private String nome;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @NotNull
-    @NotBlank
     private Endereco endereco;
 }

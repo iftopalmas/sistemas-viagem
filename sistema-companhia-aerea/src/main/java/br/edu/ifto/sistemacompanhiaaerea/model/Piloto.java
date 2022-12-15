@@ -16,7 +16,7 @@ public class Piloto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private PessoaFisica pessoaFisica;
 
     @NotNull
@@ -25,6 +25,5 @@ public class Piloto {
     private String numeroBreve;
 
     @NotNull
-    @NotBlank
     private LocalDate validadeBreve;
 }
