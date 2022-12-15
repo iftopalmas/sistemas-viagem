@@ -12,9 +12,9 @@ import java.util.List;
 @RepositoryRestResource (collectionResourceRel ="reservas", path ="reservas")
 public interface ReservaRepository extends PagingAndSortingRepository <Reserva, Long> {
 
-    Optional<Cliente> findreservaIdcliente(@Param("id") Long id);
+    List<Reserva> findByClienteId(Long id);
 
-    List <Reserva> findByIdlocadoraRetirada (@Param("id")Long id);
+    List <Reserva> findByLocadoraRetiradaId(Long id);
 
-    List <Reserva> findByIdlocadoraDevolucao (@Param("id")Long id);
+    List <Reserva> findByLocadoraDevolucaoId(Long id);
 }
