@@ -11,8 +11,8 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Veiculo {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotNull
     private Long id;
 
     @NotNull
@@ -28,12 +28,4 @@ public class Veiculo {
 
     @ManyToOne(cascade = CascadeType.ALL)
     private Locadora locadora;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
