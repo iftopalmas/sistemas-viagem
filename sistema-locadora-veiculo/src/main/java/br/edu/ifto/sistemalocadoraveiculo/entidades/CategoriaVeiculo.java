@@ -12,16 +12,15 @@ import javax.validation.constraints.NotNull;
 @Setter
 @Entity
 public class CategoriaVeiculo {
-    @Getter(AccessLevel.NONE)
-    @Setter(AccessLevel.NONE)
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NotNull
     private Long id;
 
     @NotNull
     @Column(unique = true)
     private String descricao;
+    
     @NotNull
     private String detalhes;
 
