@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.Optional;
 import java.util.List;
 
-@RepositoryRestResource (collectionResourceRel ="ReservaRepository",path ="ReservaRepository")
+@RepositoryRestResource (collectionResourceRel ="reservas", path ="reservas")
 public interface ReservaRepository extends PagingAndSortingRepository <Reserva, Long> {
 
     Optional<Cliente> findreservaIdcliente(@Param("id") Long id);
