@@ -9,5 +9,5 @@ import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "Aviao", path = "Avioes")
 public interface AviaoRepository extends PagingAndSortingRepository<Aviao, Long> {
-    List<Aviao> findAviaoByPrefixo(@Param("prefixo") String prefixo);
+    List<Aviao> findAviaoByPrefixo(String prefixo);
 }
