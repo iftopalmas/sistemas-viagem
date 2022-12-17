@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
-@RepositoryRestResource(collectionResourceRel = "Aviao", path = "Avioes")
+@RepositoryRestResource(collectionResourceRel = "avioes", path = "avioes")
 public interface AviaoRepository extends PagingAndSortingRepository<Aviao, Long> {
     List<Aviao> findAviaoByPrefixo(String prefixo);
 }
