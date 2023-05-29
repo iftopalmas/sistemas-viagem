@@ -30,3 +30,4 @@ Como os sistemas são independentes, cada um terá seu próprio banco de dados. 
 Todos os sistemas que possuem tabelas de cidades e estados devem utilizar os códigos do IBGE para permitir que eles funcionem em conjunto. Se em um sistema uma cidade tiver um código e em outro sistema tiver outro código, obteremos dados errados ao integrar estes sistemas.
 
 Uma lista de cidades e estados com os códigos do IBGE pode ser obtida no script [cidades-brasil-ibge.sql](cidades-brasil-ibge.sql) para PostgreSQL.
+
