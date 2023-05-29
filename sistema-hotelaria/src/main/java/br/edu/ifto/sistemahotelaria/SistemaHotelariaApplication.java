@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SistemaHotelariaApplication {
 
 	public static void main(String[] args) {
+		//teste
 		SpringApplication.run(SistemaHotelariaApplication.class, args);
 	}
 
