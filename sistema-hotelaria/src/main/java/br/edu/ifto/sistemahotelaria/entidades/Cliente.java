@@ -8,7 +8,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
-
 @Entity
 @Getter
 @Setter
@@ -30,4 +29,7 @@ public class Cliente {
     private String celular;
 
     private boolean fumante;
+
+    @OneToOne
+    private Endereco endereco;
 }
