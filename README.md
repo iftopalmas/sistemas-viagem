@@ -34,3 +34,7 @@ O projeto requer o JDK 7. Após clonar o repositório git na sua máquina, você
 
 Para alterar e rodar um projeto específico, você não deve abrir a pasta raiz onde estão todos os projetos. Deve abrir no seu IDE apenas a pasta do projeto específico que deseja ver/alterar (pastas indicadas na seção 1.1).
 Se abrir a pasta raiz dos 4 projetos e tentar rodar um projeto específico, a aplicação não irá encontrar o arquivo .env, pois na pasta principal não tem nenhum arquivo deste tipo (e não deve ter).
+
+## 4. Como contribuir com o projeto
+
+Veja o [guia de contribuição aqui](CONTRIBUTING.md).
