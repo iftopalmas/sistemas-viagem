@@ -3,6 +3,7 @@
 
 ## Introdução
 
+
 O objetivo deste projeto é desenvolver um sistema distribuído formado por 4 outros sistemas, que interoperam por meio de web services REST (web API). Os projetos são apenas aplicações backend e devem ser desenvolvidas em Java 17 utilizando as melhores práticas como:
 
 - Respository/DAO sem duplicação de código de operações CRUD básicas
