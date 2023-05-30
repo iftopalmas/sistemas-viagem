@@ -24,7 +24,7 @@ O repositório é composto de 4 sistemas:
 
 ## 2. Banco de Dados
 
-Como os sistemas são independentes, cada um terá seu próprio banco de dados. Mas para facilitar, sugiro a utilização de PostgreSQL em todos.
+Como os sistemas são independentes, cada um terá seu próprio banco de dados.
 
 Todos os sistemas que possuem tabelas de cidades e estados devem utilizar os códigos do IBGE para permitir que eles funcionem em conjunto. Se em um sistema uma cidade tiver um código e em outro sistema tiver outro código, obteremos dados errados ao integrar estes sistemas.
 
