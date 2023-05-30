@@ -16,6 +16,7 @@ import lombok.Setter;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @OneToOne
     private Pessoa pessoa;
