@@ -1,7 +1,5 @@
 package br.edu.ifto.sistemacompanhiaaerea.repository;
-
 import br.edu.ifto.sistemacompanhiaaerea.model.Voo;
-import br.edu.ifto.sistemacompanhiaaerea.model.CompanhiaAerea;
 import br.edu.ifto.sistemacompanhiaaerea.model.Aeroporto;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
