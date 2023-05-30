@@ -28,13 +28,21 @@ Como os sistemas são independentes, cada um terá seu próprio banco de dados. 
 
 Todos os sistemas que possuem tabelas de cidades e estados devem utilizar os códigos do IBGE para permitir que eles funcionem em conjunto. Se em um sistema uma cidade tiver um código e em outro sistema tiver outro código, obteremos dados errados ao integrar estes sistemas.
 
-## 3. Configurações do Ambiente de Desenvolvimento
+## 3. Baixando os fontes do projeto
+
+Para baixar os fontes você deve executar uma operação de clone do projeto usando git. Pra isso, clique no botão "Code" no canto superior direito, depois em HTTPS e copie a URL lá, executando no terminal:
+
+```shell
+git clone URL-copiada
+```
+
+## 4. Configurações do Ambiente de Desenvolvimento
 
 O projeto requer o JDK 7. Após clonar o repositório git na sua máquina, você deve copiar o arquivo `.env.example` na pasta de cada um dos 4 projetos mostrados acima e colar como `.env`. Você não pode renomear o arquivo, deve criar uma cópia. O arquivo .env é ignorado e não é incluído no repositório, pois pode conter informações sensíveis como senhas.
 
 Para alterar e rodar um projeto específico, você não deve abrir a pasta raiz onde estão todos os projetos. Deve abrir no seu IDE apenas a pasta do projeto específico que deseja ver/alterar (pastas indicadas na seção 1.1).
 Se abrir a pasta raiz dos 4 projetos e tentar rodar um projeto específico, a aplicação não irá encontrar o arquivo .env, pois na pasta principal não tem nenhum arquivo deste tipo (e não deve ter).
 
-## 4. Como contribuir com o projeto
+## 5. Como contribuir com o projeto
 
 Veja o [guia de contribuição aqui](CONTRIBUTING.md).
