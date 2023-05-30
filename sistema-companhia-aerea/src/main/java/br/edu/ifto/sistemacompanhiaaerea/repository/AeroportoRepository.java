@@ -10,11 +10,11 @@ import java.util.List;
 
 @RepositoryRestResource(path = "aeroportos", collectionResourceRel = "aeroportos")
 public interface AeroportoRepository extends PagingAndSortingRepository<Aeroporto, Long> {
-    @GetMapping("/aeroportos/cidade/{cidadeId}")
+    @GetMapping("/cidade/{cidadeId}")
     List<Aeroporto> findAeroportoByCidadeId(@PathVariable Long cidadeId);
-    @GetMapping("/aeroportos/estado/{uf}")
+    @GetMapping("/estado/{uf}")
     List<Aeroporto> findAeroportoByCidade_EstadoUf(@PathVariable String uf);
-    @GetMapping("/aeroportos/iata/{codigoIata}")
+    @GetMapping("/iata/{codigoIata}")
     Aeroporto findAeroportoByCodigoIata(@PathVariable String codigoIata);
 }
 
