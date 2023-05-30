@@ -6,6 +6,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
-public interface PilotoRepository extends JpaRepository<Piloto, Long> {
+@RepositoryRestResource(collectionResourceRel = "pilotos", path = "pilotos")
+public interface PilotoRepository extends PagingAndSortingRepository<Piloto, Long> {
     Optional<Piloto> findByPessoaFisicaCpf(@Param("cpf") String cpf);
 }
