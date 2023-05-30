@@ -19,7 +19,7 @@ public class Endereco {
     private String logradouro;
 
     @NotNull
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Cidade cidade;
 
     private String bairro;
