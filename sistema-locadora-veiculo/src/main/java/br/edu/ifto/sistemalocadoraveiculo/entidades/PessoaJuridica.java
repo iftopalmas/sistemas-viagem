@@ -1,11 +1,15 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import org.hibernate.validator.constraints.br.CNPJ;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.validator.constraints.br.CNPJ;
 
 @Getter
 @Setter
