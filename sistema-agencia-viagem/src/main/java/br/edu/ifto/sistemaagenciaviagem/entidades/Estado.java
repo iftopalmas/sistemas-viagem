@@ -1,12 +1,15 @@
 package br.edu.ifto.sistemaagenciaviagem.entidades;
 
-import lombok.Data;
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import java.util.List;
 
 
 @Entity
