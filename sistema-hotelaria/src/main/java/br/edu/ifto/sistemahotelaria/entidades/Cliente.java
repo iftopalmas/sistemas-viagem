@@ -1,12 +1,18 @@
 package br.edu.ifto.sistemahotelaria.entidades;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.time.LocalDate;
+
 import org.hibernate.validator.constraints.br.CPF;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import java.time.LocalDate;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Getter
