@@ -27,16 +27,32 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: |
-        mvn -B package --file sistema-agencia-viagem/pom.xml
-        mvn -B package --file sistema-companhia-aerea/pom.xml
-        mvn -B package --file sistema-hotelaria/pom.xml
-        mvn -B package --file sistema-locadora-veiculo/pom.xml
+    - name: Build sistema-agencia-viagem
+      run: mvn -B package --file sistema-agencia-viagem/pom.xml
+    - name: Build sistema-companhia-aerea
+      run: mvn -B package --file sistema-companhia-aerea/pom.xml
+    - name: Build sistema-hotelaria
+      run: mvn -B package --file sistema-hotelaria/pom.xml
+    - name: Build sistema-locadora-veiculo
+      run: mvn -B package --file sistema-locadora-veiculo/pom.xml
     # Executa os servidores dos projetos e finaliza depois da execução para verificar se não há erros na inicialização
-    - name: Run projects
+    - name: Run sistema-agencia-viagem
       run: |
-        cd sistema-agencia-viagem   && cp .env.example .env; java -jar target/*.jar shutdown; cd ..
-        cd sistema-companhia-aerea  && cp .env.example .env; java -jar target/*.jar shutdown; cd ..
-        cd sistema-hotelaria        && cp .env.example .env; java -jar target/*.jar shutdown; cd ..
-        cd sistema-locadora-veiculo && cp .env.example .env; java -jar target/*.jar shutdown
+        cd sistema-agencia-viagem   
+        cp .env.example .env
+        java -jar target/*.jar shutdown
+    - name: Run sistema-companhia-aerea
+      run: |
+        cd sistema-companhia-aerea  
+        cp .env.example .env
+        java -jar target/*.jar shutdown
+    - name: Run sistema-hotelaria
+      run: |
+        cd sistema-hotelaria
+        cp .env.example .env
+        java -jar target/*.jar shutdown
+    - name: Run sistema-locadora-veiculo
+      run: |
+        cd sistema-locadora-veiculo 
+        cp .env.example .env
+        java -jar target/*.jar shutdown
