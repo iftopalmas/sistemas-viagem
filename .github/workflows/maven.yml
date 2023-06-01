@@ -33,3 +33,10 @@ jobs:
         mvn -B package --file sistema-companhia-aerea/pom.xml
         mvn -B package --file sistema-hotelaria/pom.xml
         mvn -B package --file sistema-locadora-veiculo/pom.xml
+    # Executa os servidores dos projetos e finaliza depois da execução para verificar se não há erros na inicialização
+    - name: Run projects
+      run: |
+        cd sistema-agencia-viagem   && cp .env.example .env; java -jar target/*.jar shutdown; cd ..
+        cd sistema-companhia-aerea  && cp .env.example .env; java -jar target/*.jar shutdown; cd ..
+        cd sistema-hotelaria        && cp .env.example .env; java -jar target/*.jar shutdown; cd ..
+        cd sistema-locadora-veiculo && cp .env.example .env; java -jar target/*.jar shutdown
