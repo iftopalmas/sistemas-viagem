@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.edu.ifto</groupId>
 	<artifactId>sistema-locadora-veiculo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>sistema-locadora-veiculo</name>
 	<description>Sistema de Locadora de Veículos</description>
 	<properties>
