@@ -1,13 +1,34 @@
 package br.edu.ifto.sistemacompanhiaaerea;
 
+import lombok.SneakyThrows;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class SistemaCompanhiaAereaApplication {
+    public static ConfigurableApplicationContext ctx;
+    private static boolean shutdown = false;
 
-	public static void main(String[] args) {
-		SpringApplication.run(SistemaCompanhiaAereaApplication.class, args);
-	}
+    /**
+     * Inicia o servidor de aplicação.
+     * @param args argumentos de linha de comando.
+     *             Passe shutdown, stop ou kill para fechar o servidor depois da inicialização
+     *             (para propósitos de testes).
+     */
+    public static void main(String[] args) {
+        shutdown = (args.length > 0 && (args[0].equalsIgnoreCase("shutdown") || args[0].equalsIgnoreCase("stop") || args[0].equalsIgnoreCase("kill")));
+        ctx = SpringApplication.run(SistemaCompanhiaAereaApplication.class, args);
+        if(shutdown) {
+            System.out.printf("%n%n# Recebida solicitação do usuário, via linha de comando, para desligar o servidor.%n");
+            new Thread(SistemaCompanhiaAereaApplication::shutdown).start();
+        }
+    }
 
+    @SneakyThrows
+    public static void shutdown() {
+        Thread.sleep(2000);
+        System.out.printf("# Desligando o servidor por requisição do usuário via linha de comando.%n%n");
+        ctx.close();
+    }
 }
