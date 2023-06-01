@@ -10,7 +10,7 @@
     </parent>
     <groupId>br.edu.ifto</groupId>
     <artifactId>sistema-companhia-aerea</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>sistema-companhia-aerea</name>
     <description>Sistema Companhia Aérea</description>
     <properties>
