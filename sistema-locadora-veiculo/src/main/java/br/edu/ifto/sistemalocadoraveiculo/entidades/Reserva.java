@@ -20,7 +20,7 @@ public class Reserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;
-    
+
     @NotNull
     private LocalDateTime dataHoraCadastro = LocalDateTime.now();
 
@@ -32,7 +32,6 @@ public class Reserva {
 
     @ManyToOne
     @NotNull
-    @OneToOne
     private Cliente cliente;
 
     @ManyToOne
