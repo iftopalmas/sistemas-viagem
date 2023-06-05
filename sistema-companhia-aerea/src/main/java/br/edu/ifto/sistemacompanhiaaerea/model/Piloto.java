@@ -19,6 +19,12 @@ public class Piloto {
     @OneToOne(cascade = CascadeType.ALL)
     private PessoaFisica pessoaFisica;
 
+    @NotNull
+    private boolean ativo;
+
+    @ManyToOne
+    private CompanhiaAerea companhiaAerea;
+
     /**
      * Número do Brevê do piloto.
      */
