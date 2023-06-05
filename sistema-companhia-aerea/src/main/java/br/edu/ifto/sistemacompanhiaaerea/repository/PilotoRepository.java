@@ -9,5 +9,5 @@ import java.util.Optional;
 @RepositoryRestResource(collectionResourceRel = "pilotos", path = "pilotos")
 public interface PilotoRepository extends PagingAndSortingRepository<Piloto, Long> {
     Optional<Piloto> findByPessoaFisicaCpf(@Param("cpf") String cpf);
-    Optional<List<Piloto>> findAllByAtivo(@Param("ativo") Boolean ativo);
+    Optional<List<Piloto>> findPilotoByAtivo(@Param("ativo") Boolean ativo);
 }
