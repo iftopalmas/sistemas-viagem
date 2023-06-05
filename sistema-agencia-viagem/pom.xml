@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.edu.ifto</groupId>
 	<artifactId>sistema-agencia-viagem</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>sistema-agencia-viagem</name>
 	<description>Sistemas REST para gerenciamento de agências de viagens</description>
 	<properties>
