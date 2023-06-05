@@ -30,6 +30,11 @@ public class Reserva {
     @NotNull
     private LocalDateTime dataHoraDevolucaoEsperada;
 
+    /**
+     * Data/hora em que o veículo foi de fato devolvido (se já realmente foi).
+     */
+    private LocalDateTime dataHoraDevolucao;
+
     @ManyToOne
     @NotNull
     private Cliente cliente;
