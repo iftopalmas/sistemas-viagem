@@ -10,14 +10,13 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
-
+@Entity
 @Getter
 @Setter
-@Entity
-public class PessoaJuridica {
+public class PessoaJuridica  extends Pessoa{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @NotBlank
     private String razaoSocial;
