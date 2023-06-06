@@ -15,7 +15,7 @@ public interface PilotoRepository extends PagingAndSortingRepository<Piloto, Lon
     @GetMapping("/cpf/{cpf}")
     Optional<Piloto> findByPessoaFisicaCpf(@PathVariable String cpf);
 
-    @GetMapping("/ativo/{id}")
-    @Query("select p from Piloto p where p.ativo = true and p.companhiaAerea.id = :id")
-    List<Piloto> findPilotoByAtivo(@PathVariable Long id);
+    @GetMapping("/ativo/{companhiaId}")
+    @Query("select p from Piloto p where p.ativo = true and p.companhiaAerea.id = :companhiaId")
+    List<Piloto> findPilotosAtivosByCompanhiaId(@PathVariable Long companhiaId);
 }
