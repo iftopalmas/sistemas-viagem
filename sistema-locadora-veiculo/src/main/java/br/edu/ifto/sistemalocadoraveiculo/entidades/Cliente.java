@@ -1,13 +1,9 @@
 package br.edu.ifto.sistemalocadoraveiculo.entidades;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -17,13 +13,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Cliente {
+public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    private Pessoa pessoa;
+    @OneToOne(cascade = CascadeType.PERSIST)
+    private PessoaFisica pessoaFisica;
 
     @NotNull
     @NotBlank
