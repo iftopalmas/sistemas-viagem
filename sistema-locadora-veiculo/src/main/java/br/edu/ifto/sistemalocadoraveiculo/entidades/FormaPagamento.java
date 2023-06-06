@@ -12,7 +12,7 @@ public class FormaPagamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @NotBlank
     @Column(unique = true)
