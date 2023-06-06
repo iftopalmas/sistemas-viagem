@@ -37,6 +37,24 @@ INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (25, 'Aeroporto d
 INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (26, 'Aeroporto Internacional de Aracaju - Santa María', 26, 'AJU, SBAR');
 INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (27, 'Aeroporto Internacional de Palmas - Brigadeiro Lysias Rodrigues', 27, 'PMW, SBPJ');
 
+CREATE TABLE Estado (
+    id serial PRIMARY KEY NOT NULL,
+    nome varchar(75) NOT NULL,
+    uf varchar(2) NOT NULL
+);
+
+CREATE UNIQUE INDEX ix_estado ON Estado (nome);
+CREATE UNIQUE INDEX ix_uf ON Estado (uf);
+
+CREATE TABLE Cidade (
+    id serial PRIMARY KEY NOT NULL,
+    nome varchar(120) NOT NULL,
+    estado_id int NOT NULL,
+    constraint fk_cidade_estado foreign key (estado_id) references Estado(id)
+);
+
+CREATE UNIQUE INDEX ix_cidade ON Cidade (nome, estado_id);
+
 INSERT INTO Estado (id, nome, uf) VALUES (1, 'Acre', 'AC');
 INSERT INTO Estado (id, nome, uf) VALUES (2, 'Alagoas', 'AL');
 INSERT INTO Estado (id, nome, uf) VALUES (3, 'Amapá', 'AP');
@@ -122,8 +140,23 @@ INSERT INTO PessoaFisica (id, cpf, dataNascimento) VALUES (2, '222.222.222-22', 
 INSERT INTO PessoaFisica (id, cpf, dataNascimento) VALUES (3, '333.333.333-33', '03/03/2003');
 INSERT INTO PessoaFisica (id, cpf, dataNascimento) VALUES (4, '444.444.444-44', '04/04/2004');
 
-INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (1, 1, '1111', '01/01/2021');
-INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (2, 2, '2222', '02/02/2022');
-INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (3, 3, '3333', '03/03/2023');
-INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (4, 4, '4444', '04/04/2024');
+INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (1, 1, '1111', '01/01/2041');
+INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (2, 2, '2222', '02/02/2042');
+INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (3, 3, '3333', '03/03/2043');
+INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (4, 4, '4444', '04/04/2044');
 
+INSERT INTO Voo (id, numero, dataHoraPartidaEsperada, dataHoraChegadaEsperada,
+aviao_id, piloto_id, companhiaAerea_id, aeroporto_id, aeroporto_id) VALUES
+(1, '101', '10/05/2023', '12/05/2023', 2, 1, 1, 4, 17);
+
+INSERT INTO Voo (id, numero, dataHoraPartidaEsperada, dataHoraChegadaEsperada,
+aviao_id, piloto_id, companhiaAerea_id, aeroporto_id, aeroporto_id) VALUES
+(2, '102', '10/05/2023', '12/05/2023', 4, 2, 1, 6, 10);
+
+INSERT INTO Voo (id, numero, dataHoraPartidaEsperada, dataHoraChegadaEsperada,
+aviao_id, piloto_id, companhiaAerea_id, aeroporto_id, aeroporto_id) VALUES
+(3, '103', '10/05/2023', '12/05/2023', 6, 3, 2, 22, 3);
+
+INSERT INTO Voo (id, numero, dataHoraPartidaEsperada, dataHoraChegadaEsperada,
+aviao_id, piloto_id, companhiaAerea_id, aeroporto_id, aeroporto_id) VALUES
+(4, '104', '10/05/2023', '12/05/2023', 8, 4, 2, 27, 12);
