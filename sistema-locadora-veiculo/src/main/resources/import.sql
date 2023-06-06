@@ -5591,6 +5591,36 @@ INSERT INTO Cidade (id, nome, estado_id) VALUES (5563, 'Wanderlândia', 27);
 INSERT INTO Cidade (id, nome, estado_id) VALUES (5564, 'Xambioá', 27);
 
 
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (1, 'Compacto', 'Carros Compactos');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (2, 'Econômico', 'Carros Econômico');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (3, 'Intermediário', 'Carros Intermediários');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (4, 'SUV', 'Carros tipo SUV');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (5, 'Executivo', 'Carros Executivos');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (6, 'Prime', 'Carros de Luxo Exclusivos');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (7, 'Minivan', 'Carros tipo Minivan');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (8, 'Pick-Up', 'Carros tipo Pick-Up');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (9, 'Furgão', 'Carros tipo Furgão');
+INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (10, 'Van', 'Carros tipo Van');
+
+INSERT INTO endereco (id, logradouro, cep, cidade_id) VALUES (1, 'ARSO 23 Alameda 7', '77015300', 5514);
+INSERT INTO pessoa (dtype, id, nome, cpf, data_nascimento, endereco_id) VALUES ('F', 1, 'Fulano Pereira', '9876543210', '1990-05-07', 1);
+
+INSERT INTO cliente (id, data_cadastro, email, telefone, pessoa_id) VALUES (1,'2023-05-15','fulano@fulano.com','998988787',1);
+
+INSERT INTO funcionario (id, numero_carteira_trabalho, pessoa_fisica_id) VALUES (1,'012345678901',1);
+
+INSERT INTO marca (id, descricao) VALUES (1,'Chevrolet');
+
+INSERT INTO modelo (id, descricao, marca_id) VALUES (1,'Tracker',1);
+INSERT INTO modelo (id, descricao, marca_id) VALUES (2,'Blazer',1);
+
+INSERT INTO veiculo (id, placa, categoria_id, modelo_id, locadora_id) VALUES (1,'PMW2023',4,1,1);
+
+INSERT INTO forma_pagamento(id, descricao) VALUES (1, 'Cartao de Crédito')
+
+INSERT INTO reserva (cliente_id, data_hora_cadastro, data_hora_devolucao, data_hora_devolucao_esperada, data_hora_retirada_esperada, forma_pagamento_id, id, locadora_devolucao_id, locadora_retirada_id, veiculo_id) VALUES (1,'2023-05-25','2023-05-31','2023-05-31','2023-05-30',1,1,1,1,1);
+
+
 INSERT INTO ENDERECO ( CiDADE_ID , iD , CEP ,LOGRADOURO ) VALUES (1,1,'77777-777', 'Rua das estrelas');
 INSERT INTO ENDERECO ( CiDADE_ID , iD , CEP ,LOGRADOURO ) VALUES (2,2,'8888-888', 'Alameda 18');
 

@@ -18,10 +18,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class PessoaFisica extends Pessoa {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
-
   @CPF
   @NotNull
   @NotBlank
