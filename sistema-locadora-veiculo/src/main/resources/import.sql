@@ -5617,4 +5617,6 @@ INSERT INTO modelo (id, descricao, marca_id) VALUES (2,'Blazer',1);
 
 INSERT INTO veiculo (id, placa, categoria_id, modelo_id, locadora_id) VALUES (1,'PMW2023',4,1,1);
 
-INSERT INTO reserva (id, data_hora_cadastro, data_hora_devolucao_esperada, data_hora_retirada_esperada, veiculo_id, cliente_id, locadora_devolucao_id, locadora_retirada_id) VALUES (1,'2023-05-25','2023-05-31','2023-05-30',1,1,1,1);
+INSERT INTO forma_pagamento(id, descricao) VALUES (1, 'Cartao de Crédito')
+
+INSERT INTO reserva (cliente_id, data_hora_cadastro, data_hora_devolucao, data_hora_devolucao_esperada, data_hora_retirada_esperada, forma_pagamento_id, id, locadora_devolucao_id, locadora_retirada_id, veiculo_id) VALUES (1,'2023-05-25','2023-05-31','2023-05-31','2023-05-30',1,1,1,1,1);
