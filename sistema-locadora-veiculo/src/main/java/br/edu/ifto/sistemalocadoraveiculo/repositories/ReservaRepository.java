@@ -24,8 +24,8 @@ public interface ReservaRepository extends PagingAndSortingRepository <Reserva, 
         long id
     );
 
-    List <Reserva> findByLocadoraRetiradaAndClienteId(
-        @NotNull Locadora locadoraRetirada,
+    List <Reserva> findByLocadoraRetiradaIdAndClienteId(
+        long locadoraRetiradaId,
         long id
     );
 }
