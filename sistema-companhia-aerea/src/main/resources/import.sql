@@ -1,4 +1,4 @@
-INSERT INTO MarcaAviao (id, descricao) VALUES (1, 'Boeing');
+INSERT INTO Marca_Aviao (id, descricao) VALUES (1, 'Boeing');
 
 INSERT INTO Aviao (id, marca_id, modelo, prefixo, ano_fabricacao, total_assentos) VALUES (1, 1, '737-600', 'TAL061', '2005', 132);
 INSERT INTO Aviao (id, marca_id, modelo, prefixo, ano_fabricacao, total_assentos) VALUES (5, 1, '737-600', 'TAL062', '2005', 110);
@@ -8,34 +8,6 @@ INSERT INTO Aviao (id, marca_id, modelo, prefixo, ano_fabricacao, total_assentos
 INSERT INTO Aviao (id, marca_id, modelo, prefixo, ano_fabricacao, total_assentos) VALUES (7, 1, '737-800', 'TAL082', '2015', 162);
 INSERT INTO Aviao (id, marca_id, modelo, prefixo, ano_fabricacao, total_assentos) VALUES (4, 1, '737-900', 'TAL091', '2020', 220);
 INSERT INTO Aviao (id, marca_id, modelo, prefixo, ano_fabricacao, total_assentos) VALUES (8, 1, '737-900', 'TAL092', '2020', 178);
-
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (1, 'Aeroporto Internacional de Rio Branco - Plácido de Castro', 1, 'RBR, SBRB');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (2, 'Aeroporto Internacional de Maceió - Zumbi dos Palmares', 2, 'MCZ, SBMO');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (3, 'Aeroporto Internacional de Macapá - Alberto Alcolumbre', 3, 'MCP, SBMQ');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (4, 'Aeroporto Internacional de Manaus - Eduardo Gomes', 4, 'MAO, SBEG');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (5, 'Aeroporto Internacional de Salvador - Luís Eduardo Magalhães', 5, 'SSA, SBSV');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (6, 'Aeroporto Internacional de Fortaleza - Pinto Martins', 6, 'FOR, SBFZ');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (7, 'Aeroporto Internacional de Brasília - Juscelino Kubitschek', 7, 'BSB, SBBR');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (8, 'Aeroporto Internacional de Vitória - Eurico de Aguiar Salles', 8, 'VIX, SBVT');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (9, 'Aeroporto Internacional de Goiânia - Santa Genoveva', 9, 'GYN, SBGO');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (10, 'Aeroporto Internacional de São Luís - Marechal Cunha Machado', 10, 'SLZ, SBSL');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (11, 'Aeroporto Internacional de Cuiabá - Marechal Rondon', 11, 'CGB, SBCY');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (12, 'Aeroporto Internacional de Campo Grande - Ueze Elias Zahran', 12, 'CGR, SBCG');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (13, 'Aeroporto de Belo Horizonte - Carlos Drummond de Andrade', 13, 'BHZ, SBBH');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (14, 'Aeroporto Internacional de Belém - Júlio Cezar Ribeiro', 14, 'BEL, SBBE');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (15, 'Aeroporto Internacional de João Pessoa - Presidente Castro Pinto', 15, 'JPA, SBJP');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (16, 'Aeroporto Internacional de Curitiba -Afonso Pena', 16, 'CWB, SBCT');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (17, 'Aeroporto Internacional do Recife - Gilberto Freyre', 17, 'REC, SBRF');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (18, 'Aeroporto de Teresina - Senador Petrônio Portela', 18, 'THE, SBTE');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (19, 'Aeroporto Internacional de Rio de Janeiro - Tom Jobim', 19, 'GIG, SBGL');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (20, 'Aeroporto Internacional de Natal - Governador Aluízio Alves', 20, 'NAT, SBSG');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (21, 'Aeroporto Internacional de Porto Alegre - Salgado Filho', 21, 'POA, SBPA');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (22, 'Aeroporto Internacional de Porto Velho - Jorge Teixeira de Oliveira', 22, 'PVH, SBPV');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (23, 'Aeroporto Internacional de Boa Vista - Atlas Brasil Cantanhede', 23, 'BVB, SBBV');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (24, 'Aeroporto Internacional de Florianópolis - Hercílio Luz', 24, 'FLN, SBFL');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (25, 'Aeroporto de São Paulo - Freitas Nobre', 25, 'CGH, SBSP');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (26, 'Aeroporto Internacional de Aracaju - Santa María', 26, 'AJU, SBAR');
-INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (27, 'Aeroporto Internacional de Palmas - Brigadeiro Lysias Rodrigues', 27, 'PMW, SBPJ');
 
 INSERT INTO Estado (id, nome, uf) VALUES (1, 'Acre', 'AC');
 INSERT INTO Estado (id, nome, uf) VALUES (2, 'Alagoas', 'AL');
@@ -93,52 +65,64 @@ INSERT INTO Cidade (id, nome, estado_id) VALUES (25, 'São Paulo', 25);
 INSERT INTO Cidade (id, nome, estado_id) VALUES (26, 'Aracaju', 26);
 INSERT INTO Cidade (id, nome, estado_id) VALUES (27, 'Palmas', 27);
 
-INSERT INTO CompanhiaAerea (id, nome, programaMilhas) VALUES (1, 'LATAM', 'LATAM Pass');
-INSERT INTO CompanhiaAerea (id, nome, programaMilhas) VALUES (2, 'Azul', 'TudoAzul');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (1, 'Aeroporto Internacional de Rio Branco - Plácido de Castro', 1, 'RBR');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (2, 'Aeroporto Internacional de Maceió - Zumbi dos Palmares', 2, 'MCZ');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (3, 'Aeroporto Internacional de Macapá - Alberto Alcolumbre', 3, 'MCP');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (4, 'Aeroporto Internacional de Manaus - Eduardo Gomes', 4, 'MAO');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (5, 'Aeroporto Internacional de Salvador - Luís Eduardo Magalhães', 5, 'SSA');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (6, 'Aeroporto Internacional de Fortaleza - Pinto Martins', 6, 'FOR');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (7, 'Aeroporto Internacional de Brasília - Juscelino Kubitschek', 7, 'BSB');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (8, 'Aeroporto Internacional de Vitória - Eurico de Aguiar Salles', 8, 'VIX');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (9, 'Aeroporto Internacional de Goiânia - Santa Genoveva', 9, 'GYN');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (10, 'Aeroporto Internacional de São Luís - Marechal Cunha Machado', 10, 'SLZ');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (11, 'Aeroporto Internacional de Cuiabá - Marechal Rondon', 11, 'CGB');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (12, 'Aeroporto Internacional de Campo Grande - Ueze Elias Zahran', 12, 'CGR');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (13, 'Aeroporto de Belo Horizonte - Carlos Drummond de Andrade', 13, 'BHZ');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (14, 'Aeroporto Internacional de Belém - Júlio Cezar Ribeiro', 14, 'BEL');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (15, 'Aeroporto Internacional de João Pessoa - Presidente Castro Pinto', 15, 'JPA');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (16, 'Aeroporto Internacional de Curitiba -Afonso Pena', 16, 'CWB');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (17, 'Aeroporto Internacional do Recife - Gilberto Freyre', 17, 'REC');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (18, 'Aeroporto de Teresina - Senador Petrônio Portela', 18, 'THE');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (19, 'Aeroporto Internacional de Rio de Janeiro - Tom Jobim', 19, 'GIG');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (20, 'Aeroporto Internacional de Natal - Governador Aluízio Alves', 20, 'NAT');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (21, 'Aeroporto Internacional de Porto Alegre - Salgado Filho', 21, 'POA');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (22, 'Aeroporto Internacional de Porto Velho - Jorge Teixeira de Oliveira', 22, 'PVH');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (23, 'Aeroporto Internacional de Boa Vista - Atlas Brasil Cantanhede', 23, 'BVB');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (24, 'Aeroporto Internacional de Florianópolis - Hercílio Luz', 24, 'FLN');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (25, 'Aeroporto de São Paulo - Freitas Nobre', 25, 'CGH');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (26, 'Aeroporto Internacional de Aracaju - Santa María', 26, 'AJU');
+INSERT INTO Aeroporto (id, nome, cidade_id, codigo_Iata) VALUES (27, 'Aeroporto Internacional de Palmas - Brigadeiro Lysias Rodrigues', 27, 'PM');
 
-INSERT INTO GrauParentesto (id, descricao) VALUES (1, '1° Grau');
-INSERT INTO GrauParentesto (id, descricao) VALUES (1, '2° Grau');
+INSERT INTO Companhia_Aerea (id, nome, programa_milhas) VALUES (1, 'LATAM', 'LATAM Pass');
+INSERT INTO Companhia_Aerea (id, nome, programa_milhas) VALUES (2, 'Azul', 'TudoAzul');
 
-INSERT INTO ContatoSeguranca (id, grauParentesco_id, telefone, nome) VALUES (1, 1, '99 99999-9999', 'Segurança Pessoal LTDA');
-INSERT INTO ContatoSeguranca (id, grauParentesco_id, telefone, nome) VALUES (2, 2, '99 99999-9999', 'Segurança Empresarial LTDA');
+INSERT INTO Grau_Parentesco (id, descricao) VALUES (1, '1° Grau');
+INSERT INTO Grau_Parentesco (id, descricao) VALUES (2, '2° Grau');
 
-INSERT INTO Cliente (id, telefone, email, contatoSeguranca_id) VALUES (1, '11 11111-1111', 'emailPessoal1@gmail.com', 1);
-INSERT INTO Cliente (id, telefone, email, contatoSeguranca_id) VALUES (2, '22 22222-2222', 'emailPessoal2@gmail.com', 1);
-INSERT INTO Cliente (id, telefone, email, contatoSeguranca_id) VALUES (3, '33 33333-3333', 'emailPessoal3@gmail.com', 2);
-INSERT INTO Cliente (id, telefone, email, contatoSeguranca_id) VALUES (4, '44 44444-4444', 'emailPessoal4@gmail.com', 2);
+INSERT INTO Contato_Seguranca (id, grau_parentesco_id, telefone, nome) VALUES (1, 1, '99 99999-9999', 'Segurança Pessoal LTDA');
+INSERT INTO Contato_Seguranca (id, grau_parentesco_id, telefone, nome) VALUES (2, 2, '99 99999-9999', 'Segurança Empresarial LTDA');
 
-INSERT INTO Endereco (id, logradouro, cep, cidade_id, bairro, numero) VALUES (1, 'Logradouro 1', 'CEP 1', 27), 'Bairro 1', 'Numero 1');
+INSERT INTO Cliente (id, telefone, email, contato_seguranca_id) VALUES (1, '11 11111-1111', 'emailPessoal1@gmail.com', 1);
+INSERT INTO Cliente (id, telefone, email, contato_seguranca_id) VALUES (2, '22 22222-2222', 'emailPessoal2@gmail.com', 1);
+INSERT INTO Cliente (id, telefone, email, contato_seguranca_id) VALUES (3, '33 33333-3333', 'emailPessoal3@gmail.com', 2);
+INSERT INTO Cliente (id, telefone, email, contato_seguranca_id) VALUES (4, '44 44444-4444', 'emailPessoal4@gmail.com', 2);
+
+INSERT INTO Endereco (id, logradouro, cep, cidade_id, bairro, numero) VALUES (1, 'Logradouro 1', 'CEP 1', 27, 'Bairro 1', 'Numero 1');
 INSERT INTO Endereco (id, logradouro, cep, cidade_id, bairro, numero) VALUES (2, 'Logradouro 2', 'CEP 2', 27, 'Bairro 2', 'Numero 2');
 INSERT INTO Endereco (id, logradouro, cep, cidade_id, bairro, numero) VALUES (3, 'Logradouro 3', 'CEP 3', 27, 'Bairro 3', 'Numero 3');
 INSERT INTO Endereco (id, logradouro, cep, cidade_id, bairro, numero) VALUES (4, 'Logradouro 4', 'CEP 4', 27, 'Bairro 4', 'Numero 4');
 
-INSERT INTO Pessoa (id, nome, endereco_id) VALUES (1, 'Ismar Vinicius', 1);
-INSERT INTO Pessoa (id, nome, endereco_id) VALUES (2, 'Arthur Souza', 2);
-INSERT INTO Pessoa (id, nome, endereco_id) VALUES (3, 'Pablo Hígor', 3);
-INSERT INTO Pessoa (id, nome, endereco_id) VALUES (4, 'Wellington Neto', 4);
+INSERT INTO Pessoa (id, nome, endereco_id, cpf, data_nascimento, dtype) VALUES (1, 'Ismar Vinicius', 1, '111.111.111-11', '2001-1-1', ' ');
+INSERT INTO Pessoa (id, nome, endereco_id, cpf, data_nascimento, dtype) VALUES (2, 'Arthur Souza', 2, '222.222.222-22', '2002-2-2', ' ');
+INSERT INTO Pessoa (id, nome, endereco_id, cpf, data_nascimento, dtype) VALUES (3, 'Pablo Hígor', 3, '333.333.333-33', '2003-3-3', ' ');
+INSERT INTO Pessoa (id, nome, endereco_id, cpf, data_nascimento, dtype) VALUES (4, 'Wellington Neto', 4, '444.444.444-44', '2004-4-4', ' ');
 
-INSERT INTO PessoaFisica (id, cpf, dataNascimento) VALUES (1, '111.111.111-11', '01/01/2001');
-INSERT INTO PessoaFisica (id, cpf, dataNascimento) VALUES (2, '222.222.222-22', '02/02/2002');
-INSERT INTO PessoaFisica (id, cpf, dataNascimento) VALUES (3, '333.333.333-33', '03/03/2003');
-INSERT INTO PessoaFisica (id, cpf, dataNascimento) VALUES (4, '444.444.444-44', '04/04/2004');
+INSERT INTO Piloto (id, pessoa_fisica_id, numero_breve, validade_breve, ativo, companhia_aerea_id) VALUES (1, 1, '1111', '2041-01-01', true, 1);
+INSERT INTO Piloto (id, pessoa_fisica_id, numero_breve, validade_breve, ativo, companhia_aerea_id) VALUES (2, 2, '2222', '2042-02-02', true, 1);
+INSERT INTO Piloto (id, pessoa_fisica_id, numero_breve, validade_breve, ativo, companhia_aerea_id) VALUES (3, 3, '3333', '2043-03-03', true, 2);
+INSERT INTO Piloto (id, pessoa_fisica_id, numero_breve, validade_breve, ativo, companhia_aerea_id) VALUES (4, 4, '4444', '2044-04-04', true, 2);
 
-INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (1, 1, '1111', '01/01/2041');
-INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (2, 2, '2222', '02/02/2042');
-INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (3, 3, '3333', '03/03/2043');
-INSERT INTO Piloto (id, pessoaFisica_id, numeroBreve, validadeBreve) VALUES (4, 4, '4444', '04/04/2044');
-
-INSERT INTO Voo (id, numero, dataHoraPartidaEsperada, dataHoraChegadaEsperada,
-aviao_id, piloto_id, companhiaAerea_id, aeroporto_id, aeroporto_id) VALUES
-(1, '101', '10/05/2023', '12/05/2023', 2, 1, 1, 4, 17);
-
-INSERT INTO Voo (id, numero, dataHoraPartidaEsperada, dataHoraChegadaEsperada,
-aviao_id, piloto_id, companhiaAerea_id, aeroporto_id, aeroporto_id) VALUES
-(2, '102', '10/05/2023', '12/05/2023', 4, 2, 1, 6, 10);
-
-INSERT INTO Voo (id, numero, dataHoraPartidaEsperada, dataHoraChegadaEsperada,
-aviao_id, piloto_id, companhiaAerea_id, aeroporto_id, aeroporto_id) VALUES
-(3, '103', '10/05/2023', '12/05/2023', 6, 3, 2, 22, 3);
-
-INSERT INTO Voo (id, numero, dataHoraPartidaEsperada, dataHoraChegadaEsperada,
-aviao_id, piloto_id, companhiaAerea_id, aeroporto_id, aeroporto_id) VALUES
-(4, '104', '10/05/2023', '12/05/2023', 8, 4, 2, 27, 12);
+INSERT INTO Voo (id, numero, data_hora_partida_esperada, data_hora_chegada_esperada, aviao_id, piloto_id, companhia_aerea_id, aeroporto_origem_id, aeroporto_destino_id) VALUES (1, '101', '2023-7-10 6:40:32', '2023-7-10 12:11:56', 2, 1, 1, 4, 17);
+INSERT INTO Voo (id, numero, data_hora_partida_esperada, data_hora_chegada_esperada, aviao_id, piloto_id, companhia_aerea_id, aeroporto_origem_id, aeroporto_destino_id) VALUES (2, '102', '2023-7-10 9:46:15', '2023-7-10 16:20:23', 4, 2, 1, 6, 10);
+INSERT INTO Voo (id, numero, data_hora_partida_esperada, data_hora_chegada_esperada, aviao_id, piloto_id, companhia_aerea_id, aeroporto_origem_id, aeroporto_destino_id) VALUES (3, '103', '2023-7-10 7:15:16', '2023-7-10 17:32:40', 6, 3, 2, 22, 3);
+INSERT INTO Voo (id, numero, data_hora_partida_esperada, data_hora_chegada_esperada, aviao_id, piloto_id, companhia_aerea_id, aeroporto_origem_id, aeroporto_destino_id) VALUES (4, '104', '2023-7-10 8:17:53', '2023-7-10 14:50:23', 8, 4, 2, 27, 12);
