@@ -37,24 +37,6 @@ INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (25, 'Aeroporto d
 INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (26, 'Aeroporto Internacional de Aracaju - Santa María', 26, 'AJU, SBAR');
 INSERT INTO Aeroporto (id, nome, cidade_id, codigoIata) VALUES (27, 'Aeroporto Internacional de Palmas - Brigadeiro Lysias Rodrigues', 27, 'PMW, SBPJ');
 
-CREATE TABLE Estado (
-    id serial PRIMARY KEY NOT NULL,
-    nome varchar(75) NOT NULL,
-    uf varchar(2) NOT NULL
-);
-
-CREATE UNIQUE INDEX ix_estado ON Estado (nome);
-CREATE UNIQUE INDEX ix_uf ON Estado (uf);
-
-CREATE TABLE Cidade (
-    id serial PRIMARY KEY NOT NULL,
-    nome varchar(120) NOT NULL,
-    estado_id int NOT NULL,
-    constraint fk_cidade_estado foreign key (estado_id) references Estado(id)
-);
-
-CREATE UNIQUE INDEX ix_cidade ON Cidade (nome, estado_id);
-
 INSERT INTO Estado (id, nome, uf) VALUES (1, 'Acre', 'AC');
 INSERT INTO Estado (id, nome, uf) VALUES (2, 'Alagoas', 'AL');
 INSERT INTO Estado (id, nome, uf) VALUES (3, 'Amapá', 'AP');
