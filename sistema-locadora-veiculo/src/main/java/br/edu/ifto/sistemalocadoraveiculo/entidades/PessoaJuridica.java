@@ -14,11 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class PessoaJuridica {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
+public class PessoaJuridica extends Pessoa{
     @NotBlank
     private String razaoSocial;
 
