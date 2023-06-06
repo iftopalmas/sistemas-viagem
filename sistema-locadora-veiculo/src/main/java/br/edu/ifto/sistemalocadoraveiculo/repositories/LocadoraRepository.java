@@ -1,14 +1,24 @@
 package br.edu.ifto.sistemalocadoraveiculo.repositories;
 
 import br.edu.ifto.sistemalocadoraveiculo.entidades.Locadora;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 
 import java.util.List;
-
-public interface LocadoraRepository extends JpaRepository<Locadora, Long> {
+@RepositoryRestResource(collectionResourceRel = "locadoras", path = "locadoras")
+public interface LocadoraRepository extends PagingAndSortingRepository<Locadora, Long> {
     List<Locadora> findLocadorasByEndereco_Cidade_Id(Long idCidade);
     List<Locadora> findLocadorasByCodigoIataAeroporto(String codIataAeroporto);
+    @Modifying
+    @Query("delete from Locadora l where l.id = 2")
+    public void deleteLocadora(Locadora locadora, Long id);
+    @Modifying
+    @Query("update Locadora l set l.matriz = ?1, l.codigoIataAeroporto = ?2 where l.id = ?2")
+    public void updateLocadora(Boolean matriz,String codigoIataAeroporto, Long id);
+    Locadora  save(Locadora locadora);
 
 }
 /**
