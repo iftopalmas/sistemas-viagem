@@ -10,12 +10,12 @@ import br.edu.ifto.sistemacompanhiaaerea.repository.VooRepository;
 
 
 @RestController
-@RequestMapping("/media-pontualidade")
+@RequestMapping("/voo/media-pontualidade")
 public class VooController {
-  @Autowired
-  private VooRepository vooRepository;
+    @Autowired
+    private VooRepository vooRepository;
 
-   @GetMapping("/{companhiaId}")
+    @GetMapping("/{companhiaId}")
     public Double calcularMediaVoosPontuaisByCompanhiaAereaId(@PathVariable("companhiaId") Long companhiaId) {
         return vooRepository.calcularMediaVoosPontuaisByCompanhiaAereaId(companhiaId);
     }
