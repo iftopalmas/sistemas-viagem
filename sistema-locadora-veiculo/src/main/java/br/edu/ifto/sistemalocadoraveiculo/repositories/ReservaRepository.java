@@ -11,21 +11,28 @@ import java.util.List;
 
 @RepositoryRestResource (collectionResourceRel ="reservas", path ="reservas")
 public interface ReservaRepository extends PagingAndSortingRepository <Reserva, Long> {
-
     List<Reserva> findByClienteId(Long id);
 
-    List <Reserva> findByLocadoraRetiradaId(Long id);
+    List<Reserva> findByLocadoraRetiradaId(Long id);
 
-    List <Reserva> findByLocadoraDevolucaoId(Long id);
+    List<Reserva> findByLocadoraDevolucaoId(Long id);
 
-    List <Reserva> findByDataHoraCadastroBetweenAndClienteId(
+    List<Reserva> findByDataHoraCadastroBetweenAndClienteId(
         @NotNull LocalDateTime dataHoraCadastroInicio,
         @NotNull LocalDateTime dataHoraCadastroFim,
         long id
     );
 
-    List <Reserva> findByLocadoraRetiradaIdAndClienteId(
+    List<Reserva> findByLocadoraRetiradaIdAndClienteId(
         long locadoraRetiradaId,
         long id
     );
+
+    Reserva findByIdAndClienteId(Long id, Long clienteId);
+
+    Reserva save(Reserva reserva);
+
+    Reserva saveAndFlush(Reserva reserva);
+
+    void deleteById(Long id);
 }
