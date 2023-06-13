@@ -15,11 +15,6 @@ import br.edu.ifto.sistemacompanhiaaerea.model.Voo;
 
 @RepositoryRestResource(collectionResourceRel = "voos", path = "voos")
 public interface VooRepository extends PagingAndSortingRepository<Voo, Long> {
-
-        @GetMapping("/lista")
-        List<Voo> findAll();
-
-
     @GetMapping("/numero/{numero}")
     Optional<Voo> findByNumero(@PathVariable String numero);
 
@@ -32,25 +27,22 @@ public interface VooRepository extends PagingAndSortingRepository<Voo, Long> {
     @GetMapping("/companhia/{companhiaId}")
     List<Voo> findByCompanhiaAereaId(@PathVariable Long companhiaId);
 
-    // listar voos para uma determinada data em um determinado aeroporto
+    /** Listar voos para uma determinada data em um determinado aeroporto */
     @GetMapping("/data/{data}/aeroporto/{aeroportoId}")
     List<Voo> findByDataHoraPartidaEsperadaAndAeroportoOrigemId(@PathVariable LocalDateTime dataHoraPartidaEsperada,
             @PathVariable Long aeroportoId);
 
-    // listar voos para uma determinada data em um determinado aeroporto e companhia
-    // aérea
+    /** Listar voos para uma determinada data em um determinado aeroporto e companhia aérea */
     @GetMapping("/data/{data}/aeroporto/{aeroportoId}/companhia/{companhiaId}")
     List<Voo> findByDataHoraPartidaEsperadaAndAeroportoOrigemIdAndCompanhiaAereaId(
             @PathVariable LocalDateTime dataHoraPartidaEsperada, @Param("aeroportoId") Long aeroportoId,
             @PathVariable Long companhiaId);
 
-    // mostrar média de voos que partiram e chegaram no horário para uma companhia
-    // aérea
-
+    /** Mostrar média de voos que partiram e chegaram no horário para uma companhia aérea */
     @Query("SELECT AVG(CASE WHEN v.dataHoraPartida <= v.dataHoraPartidaEsperada " +
             "AND v.dataHoraChegada <= v.dataHoraChegadaEsperada THEN 1 ELSE 0 END) " +
             "FROM Voo v WHERE v.companhiaAerea.id = :companhiaId")
-    Double calcularMediaVoosPontuaisByCompanhiaAereaId(@Param("companhiaId") Long companhiaId);
+    double calcularMediaVoosPontuaisByCompanhiaAereaId(@Param("companhiaId") long companhiaId);
 
    
 
