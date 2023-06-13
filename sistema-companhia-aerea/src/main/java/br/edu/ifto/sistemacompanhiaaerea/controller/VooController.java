@@ -16,7 +16,7 @@ public class VooController {
     private VooRepository vooRepository;
 
     @GetMapping("/{companhiaId}")
-    public Double calcularMediaVoosPontuaisByCompanhiaAereaId(@PathVariable("companhiaId") Long companhiaId) {
+    public Double calcularMediaVoosPontuaisByCompanhiaAereaId(@PathVariable long companhiaId) {
         return vooRepository.calcularMediaVoosPontuaisByCompanhiaAereaId(companhiaId);
     }
 }
