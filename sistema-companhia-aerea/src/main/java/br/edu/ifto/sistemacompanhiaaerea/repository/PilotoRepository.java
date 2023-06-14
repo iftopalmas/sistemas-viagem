@@ -17,15 +17,15 @@ public interface PilotoRepository extends PagingAndSortingRepository<Piloto, Lon
 
     @GetMapping("/ativo/{companhiaId}")
     @Query("select p from Piloto p where p.ativo = true and p.companhiaAerea.id = :companhiaId")
-    List<Piloto> findPilotosAtivosByCompanhiaId(@PathVariable Long companhiaId);
+    List<Piloto> findPilotosAtivosByCompanhiaId(@PathVariable long companhiaId);
 
-    @GetMapping("/totalhorasvooporpiloto/{pilotoId}")
-    @Query("select sum(datediff(hour,v.dataHoraPartida,v.dataHoraChegada)) from Voo v where v.piloto.id = :pilotoId")
-    Long getHorasVooByPilotoId(@PathVariable Long pilotoId);
+    @GetMapping("/total-horas-voo/{pilotoId}")
+    @Query("select sum(datediff(hour, v.dataHoraPartida,v.dataHoraChegada)) from Voo v where v.piloto.id = :pilotoId")
+    long getHorasVooByPilotoId(@PathVariable long pilotoId);
 
-    @GetMapping("/mediahorasvooporcompanhia/{companhiaAereaId}")
-    @Query("select v.piloto.id as pilotoId, avg(datediff(hour,v.dataHoraPartida,v.dataHoraChegada)) as mediaHorasVoo " +
+    @GetMapping("/media-horas-voo/{companhiaAereaId}")
+    @Query("select v.piloto.id as pilotoId, avg(datediff(hour, v.dataHoraPartida,v.dataHoraChegada)) as mediaHorasVoo " +
         "from Voo v where v.companhiaAerea.id = :companhiaAereaId group by v.piloto.id")
     // retorna um array bidimensional onde o id do piloto está no primeiro campo e a média está no segundo campo
-    Float[][] getMediaHorasVooByCompanhiaAereaId(@PathVariable Long companhiaAereaId);
+    float[][] getMediaHorasVooByCompanhiaAereaId(@PathVariable long companhiaAereaId);
 }
