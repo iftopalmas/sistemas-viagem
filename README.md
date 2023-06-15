@@ -38,7 +38,7 @@ git clone URL-copiada
 
 ## 4. Configurações do Ambiente de Desenvolvimento
 
-O projeto requer o JDK 7. Após clonar o repositório git na sua máquina, você deve copiar o arquivo `.env.example` na pasta de cada um dos 4 projetos mostrados acima e colar como `.env`. Você não pode renomear o arquivo, deve criar uma cópia. O arquivo .env é ignorado e não é incluído no repositório, pois pode conter informações sensíveis como senhas.
+O projeto requer o JDK 17. Após clonar o repositório git na sua máquina, você deve copiar o arquivo `.env.example` na pasta de cada um dos 4 projetos mostrados acima e colar como `.env`. Você não pode renomear o arquivo, deve criar uma cópia. O arquivo .env é ignorado e não é incluído no repositório, pois pode conter informações sensíveis como senhas.
 
 Para alterar e rodar um projeto específico, você não deve abrir a pasta raiz onde estão todos os projetos. Deve abrir no seu IDE apenas a pasta do projeto específico que deseja ver/alterar (pastas indicadas na seção 1.1).
 Se abrir a pasta raiz dos 4 projetos e tentar rodar um projeto específico, a aplicação não irá encontrar o arquivo .env, pois na pasta principal não tem nenhum arquivo deste tipo (e não deve ter).
