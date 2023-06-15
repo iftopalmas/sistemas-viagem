@@ -1,15 +1,15 @@
 package br.edu.ifto.sistemacompanhiaaerea.controller;
 
+import br.edu.ifto.sistemacompanhiaaerea.repository.VooRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.edu.ifto.sistemacompanhiaaerea.repository.VooRepository;
-
 @RestController
-
+@RequestMapping("/voo")
 public class VooController {
     @Autowired
     private VooRepository vooRepository;
@@ -20,14 +20,10 @@ public class VooController {
     }
 
     @GetMapping("pontuais/{companhiaId}/{ano}")
-    public ResponseEntity<Double> calcularPercentualVoosPontuaisByCompanhiaAereaIdAndAno(@PathVariable long companhiaId,
-            @PathVariable int ano) {
-        Double percentual = vooRepository.calcularPercentualVoosPontuaisByCompanhiaAereaIdAndAno(companhiaId, ano);
-
-        if (percentual != null) {
-            return ResponseEntity.ok(percentual);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<Double> calcularPercentualVoosPontuaisByCompanhiaAereaIdAndAno(
+        @PathVariable long companhiaId, @PathVariable int ano)
+    {
+        final var percentual = vooRepository.calcularPercentualVoosPontuaisByCompanhiaAereaIdAndAno(companhiaId, ano);
+        return percentual == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(percentual);
     }
 }

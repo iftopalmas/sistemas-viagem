@@ -28,34 +28,31 @@ public interface VooRepository extends PagingAndSortingRepository<Voo, Long> {
 
         /** Listar voos para uma determinada data em um determinado aeroporto */
         @GetMapping("/data/{data}/aeroporto/{aeroportoId}")
-        List<Voo> findByDataHoraPartidaEsperadaAndAeroportoOrigemId(@PathVariable LocalDateTime dataHoraPartidaEsperada,
-                        @PathVariable Long aeroportoId);
+        List<Voo> findByDataHoraPartidaEsperadaAndAeroportoOrigemId(
+                    @PathVariable LocalDateTime dataHoraPartidaEsperada,
+                    @PathVariable Long aeroportoId);
 
         /**
-         * Listar voos para uma determinada data em um determinado aeroporto e companhia
-         * aérea
+         * Listar voos para uma determinada data em um determinado aeroporto e companhia aérea.
          */
         @GetMapping("/data/{data}/aeroporto/{aeroportoId}/companhia/{companhiaId}")
         List<Voo> findByDataHoraPartidaEsperadaAndAeroportoOrigemIdAndCompanhiaAereaId(
-                        @PathVariable LocalDateTime dataHoraPartidaEsperada, @Param("aeroportoId") Long aeroportoId,
-                        @PathVariable Long companhiaId);
+                    @PathVariable LocalDateTime dataHoraPartidaEsperada, @Param("aeroportoId") Long aeroportoId,
+                    @PathVariable Long companhiaId);
 
-        // Mostrar média de voos que partiram e chegaram no horário para uma companhia
-        // aérea
+        /** Mostrar média de voos que partiram e chegaram no horário para uma companhia aérea */
         @Query("""
-                            SELECT (SUM(CASE WHEN v.dataHoraPartida <= v.dataHoraPartidaEsperada
-                                AND v.dataHoraChegada <= v.dataHoraChegadaEsperada THEN 1 ELSE 0 END) * 100.0) / COUNT(v)
-                            FROM Voo v WHERE v.companhiaAerea.id = :companhiaId
-                        """)
+               SELECT (SUM(CASE WHEN v.dataHoraPartida <= v.dataHoraPartidaEsperada
+               AND v.dataHoraChegada <= v.dataHoraChegadaEsperada THEN 1 ELSE 0 END) * 100.0) / COUNT(v)
+               FROM Voo v WHERE v.companhiaAerea.id = :companhiaId
+               """)
         Double calcularPercentualVoosPontuaisByCompanhiaAereaId(@PathVariable long companhiaId);
 
         @Query("""
-                        SELECT (SUM(CASE WHEN v.dataHoraPartida <= v.dataHoraPartidaEsperada
-                            AND v.dataHoraChegada <= v.dataHoraChegadaEsperada THEN 1 ELSE 0 END) * 100.0) / COUNT(v)
-                        FROM Voo v WHERE v.companhiaAerea.id = :companhiaId
-                        AND YEAR(v.dataHoraPartidaEsperada) = :ano
-                        """)
-        Double calcularPercentualVoosPontuaisByCompanhiaAereaIdAndAno(@PathVariable long companhiaId,
-                        @PathVariable int ano);
-
+               SELECT (SUM(CASE WHEN v.dataHoraPartida <= v.dataHoraPartidaEsperada
+               AND v.dataHoraChegada <= v.dataHoraChegadaEsperada THEN 1 ELSE 0 END) * 100.0) / COUNT(v)
+               FROM Voo v WHERE v.companhiaAerea.id = :companhiaId
+               AND YEAR(v.dataHoraPartidaEsperada) = :ano
+               """)
+        Double calcularPercentualVoosPontuaisByCompanhiaAereaIdAndAno(@PathVariable long companhiaId, @PathVariable int ano);
 }
