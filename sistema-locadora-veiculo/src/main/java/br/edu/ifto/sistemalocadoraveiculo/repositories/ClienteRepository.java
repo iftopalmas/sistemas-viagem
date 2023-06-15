@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.Optional;
 
 @RepositoryRestResource(collectionResourceRel = "clientes", path = "clientes")
-public interface ClienteRepository extends PagingAndSortingRepository<Cliente, Long>{
+public interface ClienteRepository extends PagingAndSortingRepository<Cliente, Long>, JpaRepository<Cliente, Long> {
 
     @GetMapping("/cpf/{cpf}")
     Optional<Cliente> findByPessoaFisicaCpf(@PathVariable String cpf);
