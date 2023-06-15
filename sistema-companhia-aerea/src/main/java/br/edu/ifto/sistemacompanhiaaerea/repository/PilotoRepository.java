@@ -26,7 +26,9 @@ public interface PilotoRepository extends PagingAndSortingRepository<Piloto, Lon
     /** {@return uma matriz de duas colunas} Cada linha representa um registro onde o id do piloto está na 1ª coluna
      *  e a média está no 2ª. */
     @GetMapping("/media-horas-voo/{companhiaAereaId}")
-    @Query("select v.piloto.id as pilotoId, avg(datediff(hour, v.dataHoraPartida,v.dataHoraChegada)) as mediaHorasVoo " +
-        "from Voo v where v.companhiaAerea.id = :companhiaAereaId group by v.piloto.id")
+    @Query("""
+           select v.piloto.id as pilotoId, avg(datediff(hour, v.dataHoraPartida,v.dataHoraChegada)) as mediaHorasVoo
+           from Voo v where v.companhiaAerea.id = :companhiaAereaId group by v.piloto.id
+           """)
     float[][] getMediaHorasVooByCompanhiaAereaId(@PathVariable long companhiaAereaId);
 }

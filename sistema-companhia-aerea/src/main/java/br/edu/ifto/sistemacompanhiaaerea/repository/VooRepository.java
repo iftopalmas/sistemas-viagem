@@ -38,8 +38,10 @@ public interface VooRepository extends PagingAndSortingRepository<Voo, Long> {
             @PathVariable Long companhiaId);
 
     /** Mostrar média de voos que partiram e chegaram no horário para uma companhia aérea */
-    @Query("SELECT AVG(CASE WHEN v.dataHoraPartida <= v.dataHoraPartidaEsperada " +
-            "AND v.dataHoraChegada <= v.dataHoraChegadaEsperada THEN 1 ELSE 0 END) " +
-            "FROM Voo v WHERE v.companhiaAerea.id = :companhiaId")
+    @Query("""
+           SELECT AVG(CASE WHEN v.dataHoraPartida <= v.dataHoraPartidaEsperada
+           AND v.dataHoraChegada <= v.dataHoraChegadaEsperada THEN 1 ELSE 0 END)
+           FROM Voo v WHERE v.companhiaAerea.id = :companhiaId
+           """)
     double calcularMediaVoosPontuaisByCompanhiaAereaId(@Param("companhiaId") long companhiaId);
 }
