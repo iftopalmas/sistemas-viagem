@@ -5603,6 +5603,7 @@ INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (9, 'Furgão', 'C
 INSERT INTO categoria_veiculo (id, descricao, detalhes) VALUES (10, 'Van', 'Carros tipo Van');
 
 INSERT INTO endereco (id, logradouro, cep, cidade_id) VALUES (1, 'ARSO 23 Alameda 7', '77015300', 5514);
+
 INSERT INTO pessoa (dtype, id, nome, cpf, data_nascimento, endereco_id) VALUES ('F', 1, 'Fulano Pereira', '9876543210', '1990-05-07', 1);
 
 INSERT INTO cliente (id, data_cadastro, email, telefone, pessoa_fisica_id) VALUES (1,'2023-05-15','fulano@fulano.com','998988787',1);
@@ -5625,5 +5626,5 @@ INSERT INTO ENDERECO ( CiDADE_ID , iD , CEP ,LOGRADOURO ) VALUES (5432,3,'77777-
 INSERT INTO ENDERECO ( CiDADE_ID , iD , CEP ,LOGRADOURO ) VALUES (5432,4,'8888-888', 'Alameda 18');
 
 
--- INSERT INTO PESSOA (DATA_NASCIMENTO, MATRIZ ,ENDERECO_ID ,ID,DTYPE ,CNPJ ,CODIGO_IATA_AEROPORTO ,CPF ,NOME, RAZAO_SOCIAL ) VALUES ('2002-02-01',true, 1,3,'Locadora','22.650.711/0001-44','123','141.300.070-33','Laura Campos', 'Doces da Laura');
--- INSERT INTO PESSOA (DATA_NASCIMENTO, MATRIZ ,ENDERECO_ID ,ID,DTYPE ,CNPJ ,CODIGO_IATA_AEROPORTO ,CPF ,NOME, RAZAO_SOCIAL ) VALUES ('2004-07-08',false, 2,4,'Locadora','22.450.111/0001-88','458','111.300.010-44','Mauro Campos', 'Campos doces');
+-- INSERT INTO PESSOA (DATA_NASCIMENTO, MATRIZ ,ENDERECO_ID ,ID,DTYPE ,CNPJ ,CODIGO_IATA_AEROPORTO ,CPF ,NOME, RAZAO_SOCIAL ) VALUES ('2002-02-01',true, 1,1,'Locadora','22.650.711/0001-44','123','141.300.070-33','Laura Campos', 'Doces da Laura');
+-- INSERT INTO PESSOA (DATA_NASCIMENTO, MATRIZ ,ENDERECO_ID ,ID,DTYPE ,CNPJ ,CODIGO_IATA_AEROPORTO ,CPF ,NOME, RAZAO_SOCIAL ) VALUES ('2004-07-08',false, 2,2,'Locadora','22.450.111/0001-88','458','111.300.010-44','Mauro Campos', 'Campos doces');
